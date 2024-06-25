@@ -9,7 +9,14 @@ import SwiftUI
 
 struct SoomView: View {
     var body: some View {
-        Text("Soom")
+        VStack{
+            Text("Soom")
+            Text("Soom")
+            Text("Soom")
+            Text("Soom")
+            Text("Soom")
+            Text("Soom")
+        }
     }
 }
 
