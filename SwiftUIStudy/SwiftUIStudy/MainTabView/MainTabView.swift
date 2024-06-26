@@ -16,7 +16,7 @@ struct MainTabView: View {
                 }
             So0View()
                 .tabItem {
-                    Label("So0", systemImage: "person.circle.fill")
+                    Label("So0", systemImage: "person.crop.square")
                 }
             LipsView()
                 .tabItem {
