@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MarbleView: View {
-    @State var number : Int = 0
+    @State var showNumber : String = "0"
     @State var beforeButtonIsNumber : Bool = true
-    @State var savedNumber : Int = 0
+    @State var savedNumber : Double = 0
+    @State var number : Double = 0
     @State var selectedOp : String = ""
     
     let widthSize : CGFloat = UIScreen.main.bounds.height * 0.1
@@ -18,7 +19,7 @@ struct MarbleView: View {
     
     var body: some View {
         VStack {
-            Text("\(number)")
+            Text(showNumber)
                 .frame(width: heightSize, height: UIScreen.main.bounds.height * 0.2)
                 .font(.system(size: 30))
                 .multilineTextAlignment(.trailing)
@@ -26,44 +27,82 @@ struct MarbleView: View {
                 numButton(7)
                 numButton(8)
                 numButton(9)
-                Image(systemName: "plus")
+                opButton("plus")
             }.frame(width: heightSize, height: widthSize)
             HStack(spacing:widthSize) {
                 numButton(4)
                 numButton(5)
                 numButton(6)
-                Image(systemName: "minus")
+                opButton("minus")
             }.frame(width: heightSize, height: widthSize)
             HStack(spacing:widthSize) {
                 numButton(1)
                 numButton(2)
                 numButton(3)
-                Image(systemName: "multiply")
+                opButton("multiply")
             }.frame(width: heightSize, height: widthSize)
             HStack(spacing:widthSize) {
-                Text("0")
-                    .foregroundColor(.white)
+                opButton("restart")
                 numButton(0)
-                numButton(1)
-                Image(systemName: "divide")
+                opButton("equal")
+                opButton("divide")
             }.frame(width: heightSize, height: widthSize)
+            Spacer()
         }
-        Spacer()
     }
 }
 
 extension MarbleView {
-    func calc(_ op : String) -> Int {
-        var result : Int!
-        
-        
-        
-        return result
+    func update() {
+        showNumber = number == ceil(number) ? String(format: "%.f", number) : String(number)
+        savedNumber = number
+        number = 0
+    }
+    
+    func calc(_ op : String) {
+        if op == "restart" {
+            beforeButtonIsNumber = false
+            update()
+            selectedOp = ""
+        } else {
+            if beforeButtonIsNumber{
+                switch selectedOp {
+                case "plus" :
+                    number = savedNumber + number
+                    update()
+                    beforeButtonIsNumber = false
+                case "minus":
+                    number = savedNumber - number
+                    update()
+                    beforeButtonIsNumber = false
+                case "multiply":
+                    number = savedNumber * number
+                    update()
+                    beforeButtonIsNumber = false
+                case "divide":
+                    if number == 0 {
+                        showNumber = "오류"
+                        savedNumber = 0
+                        number = 0
+                        beforeButtonIsNumber = false
+                    } else {
+                        number = savedNumber / number
+                        update()
+                        beforeButtonIsNumber = false
+                    }
+                default :
+                    update()
+                    beforeButtonIsNumber = false
+                }
+            }
+            selectedOp = op
+        }
     }
     
     func numButton(_ num : Int) -> some View {
         Button {
-            number = beforeButtonIsNumber ? number * 10 + num : num
+            number = beforeButtonIsNumber ? number * 10 + Double(num) : Double(num)
+            showNumber = String(format: "%.f", number)
             beforeButtonIsNumber = true
         } label : {
             Text("\(num)")
@@ -72,13 +111,13 @@ extension MarbleView {
     
     func opButton(_ op : String) -> some View {
         Button {
-            number = calc(op)
-            savedNumber = number
-            beforeButtonIsNumber = false
+            calc(op)
         } label : {
             Image(systemName: op)
         }
     }
+    
+    
 }
 
 #Preview {
