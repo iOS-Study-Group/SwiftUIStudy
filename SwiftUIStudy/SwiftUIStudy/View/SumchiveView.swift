@@ -7,9 +7,7 @@ struct SumchiveView: View {
     //study, member 배열 선언
     
     var body: some View {
-        Spacer(minLength: 70)
-        //위에 여유 공간, 최소 여백 70 보장한다..
-        
+    
         //ZStack은 위로 쌓임(뷰 중첩)
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue]),
@@ -18,7 +16,9 @@ struct SumchiveView: View {
             //그라데이션 배경
             //시작 색상(위)- 끝 색상(아래)
             //.edgesIgnoringSafeArea(.all) - 가득 채워짐, .top - 아래 공간 남음, .bottom - 위 공간 남음
-            VStack {
+            VStack(spacing:0) {
+                Spacer().frame(height: 90)
+                //sumchive 네모 박스가 너무 위에있어서 추가함.
                 
                 Rectangle()
                     .fill(Color.black.opacity(0.6))
@@ -42,24 +42,23 @@ struct SumchiveView: View {
                 
                 Image("SwiftLogo")
                     .resizable() // 사이즈 조정 가능(해상도가 화면을 초과하는 경우를 막음)
-                    .frame(width: 100, height: 100)
-                    .padding(20)
+                    .frame(width: 80, height: 80)
+                    .padding(10)
                 //이미지는 Assets 파일에 추가하면된다
                             
                 Text("iOS-STUDY-GROUP")
                     .font(.system(size: 30, weight: .light, design: .default))
                     .foregroundColor(.black)
                 
-                Spacer()
-                
+                        
                 Rectangle()
                     .fill(Color.white.opacity(0.2))
-                    .frame(width: 400, height: 545)
+                    .frame(width: 400, height: 600)
                     .cornerRadius(70)
                     .overlay(
                         VStack {
                             Text("Learn About · · ·  ")
-                                .font(.system(size: 30, weight: .black, design: .default))
+                                .font(.system(size: 25, weight: .black, design: .default))
                                 .foregroundColor(.white)
                                 .padding(.bottom, 10)
                             
@@ -68,7 +67,7 @@ struct SumchiveView: View {
                                     Image(systemName: "apple.logo")
                                         .foregroundColor(.white)
                                     Text(item)
-                                        .font(.system(size: 25, weight: .regular, design: .default))
+                                        .font(.system(size: 20, weight: .regular, design: .default))
                                         .foregroundColor(.white)
                                         .padding(7)
                                 }
@@ -77,7 +76,7 @@ struct SumchiveView: View {
                             //애플로고-study 배열 원소
                             
                             Text("MEMBER")
-                                .font(.system(size: 30, weight: .black, design: .default))
+                                .font(.system(size: 25, weight: .black, design: .default))
                                 .foregroundColor(.black)
                                 .padding(.bottom, 5)
                                 .padding(.top, 10)
@@ -93,8 +92,9 @@ struct SumchiveView: View {
                         .padding()
                     )
                     .shadow(color: .indigo, radius: 10)
-                    .padding(10)
+                    .padding(30)
             }
+            .padding(.top, 50)
         }
     }
 }
@@ -102,3 +102,4 @@ struct SumchiveView: View {
 #Preview {
     SumchiveView()
 }
+
