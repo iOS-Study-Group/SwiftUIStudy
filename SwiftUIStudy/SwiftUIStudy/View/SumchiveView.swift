@@ -16,7 +16,7 @@ struct SumchiveView: View {
             //그라데이션 배경
             //시작 색상(위)- 끝 색상(아래)
             //.edgesIgnoringSafeArea(.all) - 가득 채워짐, .top - 아래 공간 남음, .bottom - 위 공간 남음
-            VStack(spacing:0) {
+            VStack(spacing:2) {
                 Spacer().frame(height: 90)
                 //sumchive 네모 박스가 너무 위에있어서 추가함.
                 
