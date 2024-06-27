@@ -4,7 +4,7 @@
 //
 //  Created by Soom on 6/25/24.
 //
-//테스트
+
 import SwiftUI
 
 struct LipsView: View {
