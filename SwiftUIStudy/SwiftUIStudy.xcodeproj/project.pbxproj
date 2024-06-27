@@ -20,6 +20,7 @@
 		2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630292C2AD326000FD762 /* ActIveView.swift */; };
 		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
+		FB56F5102C2D2391002D24C1 /* mCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F50F2C2D2391002D24C1 /* mCalcView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		2C3630292C2AD326000FD762 /* ActIveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIveView.swift; sourceTree = "<group>"; };
 		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
+		FB56F50F2C2D2391002D24C1 /* mCalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mCalcView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				2C36302D2C2AD35C000FD762 /* MarbleView.swift */,
+				FB56F50E2C2D2377002D24C1 /* Marble's View */,
 				2C36302B2C2AD346000FD762 /* LipsView.swift */,
 				2C3630292C2AD326000FD762 /* ActIveView.swift */,
 				2C3630272C2AD2ED000FD762 /* SumchiveView.swift */,
@@ -159,6 +162,14 @@
 				2C362FFB2C2AD21D000FD762 /* MainTabView.swift */,
 			);
 			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		FB56F50E2C2D2377002D24C1 /* Marble's View */ = {
+			isa = PBXGroup;
+			children = (
+				FB56F50F2C2D2391002D24C1 /* mCalcView.swift */,
+			);
+			path = "Marble's View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
+				FB56F5102C2D2391002D24C1 /* mCalcView.swift in Sources */,
 				2C3630282C2AD2ED000FD762 /* SumchiveView.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFC2C2AD21D000FD762 /* MainTabView.swift in Sources */,
