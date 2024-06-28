@@ -8,12 +8,32 @@
 import SwiftUI
 
 struct LipsView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink(destination: FirstView()) {
+                    Text("FirstView로 이동")
+                    
+                }
+                .navigationTitle("SuperMari5")
+                
+            }
+        }
+    }
+}
+    
+    
+    
+
+
+
+struct FirstView: View {
     @State var insert: String = ""
     //입력한 텍스트 배열로 저장
     @State var newInsertTexts: [String] = []
-    
+   
     var body: some View {
-        NavigationView {
+        
             VStack {
                 List {
                     HStack {
@@ -39,7 +59,7 @@ struct LipsView: View {
                 }
                 .navigationTitle("탭뷰 꾸미기")
             }
-        }
+        
     }
 }
 
