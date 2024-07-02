@@ -25,6 +25,16 @@ struct MarbleView: View {
                                 .font(.system(size: 12))
                         }
                     }
+                    NavigationLink {
+                        lottoCreator()
+                    } label: {
+                        VStack(alignment:.leading) {
+                            Text("24.07.02")
+                                .font(.system(size: 16))
+                            Text("로또 번호 생성기")
+                                .font(.system(size: 12))
+                        }
+                    }
                 }
                 .listStyle(.plain)
             }
@@ -157,6 +167,88 @@ extension mCalcView {
     }
 }
 
+struct lottoCreator : View{
+    @Environment(\.dismiss) private var dismiss
+    @State var numbers : Set<Int> = []
+    @State var isAnimating: Bool = false
+    
+    var body : some View {
+        VStack(spacing:100){
+            HStack { // 로또 번호 보여질 줄
+                ForEach(Array(zip(0..<self.numbers.count,Array(self.numbers))), id:\.0) {index, number in
+                    lottoNumber(number)
+                        .animation(
+                            .easeIn(duration: 1)
+                            .delay(0.1 * Double(index)),
+                            value: isAnimating
+                        )
+                }
+            }
+            Button {
+                pickNewNumber()
+            } label : {
+                Text("로또 번호 생성")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundStyle(.white)
+                    .background(RoundedRectangle(cornerRadius: 15)
+                        .fill(Color.blue)
+                        .frame(width: 160, height: 50)
+                        .opacity(0.8))
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        Text("실습 목록")
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension lottoCreator {
+    func pickNewNumber() {
+        self.numbers.removeAll()
+        self.isAnimating.toggle()
+        
+        while self.numbers.count < 7 {
+            var number : Int = Int.random(in: 1...45)
+            self.numbers.insert(number)
+        }
+    }
+    
+    func lottoNumber(_ num : Int) -> some View {
+        var ballColor : Color;
+        switch num {
+        case 1...10 :
+            ballColor = .yellow
+        case 11...20 :
+            ballColor = .blue
+        case 21...30 :
+            ballColor = .red
+        case 31...40 :
+            ballColor = .gray
+        default:
+            ballColor = .green
+        }
+        return ZStack {
+            Circle()
+                .frame(width: 42, height: 42)
+                .foregroundColor(ballColor)
+            Circle()
+                .frame(width: 28, height: 28)
+                .foregroundColor(.white)
+            Text(String(num))
+                .font(.system(size: 16))
+        }
+    }
+}
 
 #Preview {
     MarbleView()
