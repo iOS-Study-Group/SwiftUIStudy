@@ -169,58 +169,69 @@ extension mCalcView {
 
 struct lottoCreator : View{
     @Environment(\.dismiss) private var dismiss
-    @State var numbers : Set<Int> = []
-    @State var isAnimating: Bool = false
+    @State var winningNumbers : Set<Int> = []
+    @State var myNumbers : [[Int]] = [[]]
+    @State var isButtonClicked : Bool = false
     
     var body : some View {
-        VStack(spacing:100){
-            HStack { // 로또 번호 보여질 줄
-                ForEach(Array(zip(0..<self.numbers.count,Array(self.numbers))), id:\.0) {index, number in
-                    lottoNumber(number)
-                        .animation(
-                            .easeIn(duration: 1)
-                            .delay(0.1 * Double(index)),
-                            value: isAnimating
-                        )
+        VStack(spacing:30){
+            if isButtonClicked {
+                Text("당첨 번호")
+                    .font(.system(size: 30))
+                HStack { // 로또 번호 보여질 줄
+                    ForEach(Array(zip(0..<self.winningNumbers.count,Array(self.winningNumbers))), id:\.0) {index, number in
+                        lottoNumber(number)
+                    }
                 }
+                
+                Divider()
+                ForEach(myNumbers, id:\.self) { numbers in
+                    HStack {
+                        ForEach(numbers, id:\.self) { number in
+                            myNumber(number, winningNumbers.firstIndex(of: number) != nil)
+                        }
+                        Divider()
+                        Text("\(6 - winningNumbers.intersection(numbers).count)등")
+                            .font(.system(size: 20))
+                    }
+                }
+                Divider()
             }
             Button {
-                pickNewNumber()
+                createNewNumber()
             } label : {
                 Text("로또 번호 생성")
                     .font(.system(size: 20, weight: .bold))
                     .foregroundStyle(.white)
                     .background(RoundedRectangle(cornerRadius: 15)
                         .fill(Color.blue)
-                        .frame(width: 160, height: 50)
+                        .frame(width: 160, height: 40)
                         .opacity(0.8))
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("실습 목록")
-                    }
-                }
             }
         }
     }
 }
 
 extension lottoCreator {
-    func pickNewNumber() {
-        self.numbers.removeAll()
-        self.isAnimating.toggle()
-        
-        while self.numbers.count < 7 {
+    func createNewNumber() {
+        self.winningNumbers.removeAll()
+        self.myNumbers.removeAll()
+        self.isButtonClicked = true
+         
+        while self.winningNumbers.count < 7 {
             var number : Int = Int.random(in: 1...45)
-            self.numbers.insert(number)
+            self.winningNumbers.insert(number)
         }
+        
+        for i in 0..<5 {
+            var numbers : Set<Int> = []
+            while numbers.count < 6 {
+                var num = Int.random(in: 1...45)
+                numbers.insert(num)
+            }
+            self.myNumbers.append(Array(numbers))
+        }
+        
     }
     
     func lottoNumber(_ num : Int) -> some View {
@@ -245,7 +256,32 @@ extension lottoCreator {
                 .frame(width: 28, height: 28)
                 .foregroundColor(.white)
             Text(String(num))
-                .font(.system(size: 16))
+                .font(.system(size: 20, weight: .bold))
+        }
+    }
+    
+    func myNumber(_ num : Int, _ isWinning : Bool) -> some View {
+        var ballColor : Color;
+        switch num {
+        case 1...10 :
+            ballColor = .yellow
+        case 11...20 :
+            ballColor = .blue
+        case 21...30 :
+            ballColor = .red
+        case 31...40 :
+            ballColor = .gray
+        default:
+            ballColor = .green
+        }
+        
+        return ZStack {
+            Circle()
+                .frame(width: 42, height: 42)
+                .foregroundColor(isWinning ? ballColor : .white)
+            Text(String(num))
+                .font(.system(size: 20, weight: .bold))
+                .foregroundColor(isWinning ? .white : .black)
         }
     }
 }
