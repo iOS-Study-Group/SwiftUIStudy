@@ -172,6 +172,7 @@ struct lottoCreator : View{
     @State var winningNumbers : Set<Int> = []
     @State var myNumbers : [[Int]] = [[]]
     @State var isButtonClicked : Bool = false
+    @State var bonusNum : Int?
     
     var body : some View {
         VStack(spacing:30){
@@ -180,6 +181,9 @@ struct lottoCreator : View{
                     .font(.system(size: 30))
                 HStack { // 로또 번호 보여질 줄
                     ForEach(Array(zip(0..<self.winningNumbers.count,Array(self.winningNumbers))), id:\.0) {index, number in
+                        if index==6 {
+                            Image(systemName: "plus")
+                        }
                         lottoNumber(number)
                     }
                 }
@@ -191,8 +195,22 @@ struct lottoCreator : View{
                             myNumber(number, winningNumbers.firstIndex(of: number) != nil)
                         }
                         Divider()
-                        Text("\(6 - winningNumbers.intersection(numbers).count)등")
-                            .font(.system(size: 20))
+                        if winningNumbers.intersection(numbers).count == 6 {
+                            if numbers.firstIndex(of: bonusNum!) != nil {
+                                Text("2등")
+                                    .font(.system(size: 20))
+                            } else {
+                                Text("1등")
+                                    .font(.system(size: 20))
+                            }
+                        } else if (winningNumbers.intersection(numbers).count >= 3) {
+                            
+                            Text("\(8 - winningNumbers.intersection(numbers).count)등")
+                                .font(.system(size: 20))
+                        } else {
+                            Text("낙첨")
+                                .font(.system(size: 20))
+                        }
                     }
                 }
                 Divider()
@@ -217,16 +235,17 @@ extension lottoCreator {
         self.winningNumbers.removeAll()
         self.myNumbers.removeAll()
         self.isButtonClicked = true
-         
+        
         while self.winningNumbers.count < 7 {
-            var number : Int = Int.random(in: 1...45)
+            let number : Int = Int.random(in: 1...45)
             self.winningNumbers.insert(number)
         }
+        bonusNum = Array(winningNumbers)[winningNumbers.count-1]
         
-        for i in 0..<5 {
+        for _ in 0..<5 {
             var numbers : Set<Int> = []
             while numbers.count < 6 {
-                var num = Int.random(in: 1...45)
+                let num = Int.random(in: 1...45)
                 numbers.insert(num)
             }
             self.myNumbers.append(Array(numbers))
