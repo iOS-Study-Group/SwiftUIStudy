@@ -227,6 +227,19 @@ struct lottoCreator : View{
                         .opacity(0.8))
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        Text("실습 목록")
+                    }
+                }
+            }
+        }
     }
 }
 
