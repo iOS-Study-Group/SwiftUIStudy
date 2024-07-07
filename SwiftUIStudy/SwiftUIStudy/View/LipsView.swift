@@ -94,7 +94,7 @@ struct LottoView: View {
             ZStack{
                 Rectangle()
                     .fill(Color.white)
-                    .frame(width: 350, height: 200)
+                    .frame(width: 350, height: 140)
                 VStack{
                     Text("번호추첨")
                     HStack {
@@ -157,87 +157,88 @@ struct LottoView: View {
             Spacer()
         }
     }
-}
-//번호 범위에 따른 번호 컬러 
-func getNumberColor( number: Int) -> Color {
-    switch number {
-    case 1...9:
-        return Color.red
-    case 10...19:
-        return Color.orange
-    case 20...29:
-        return Color.yellow
-    case 30...39:
-        return Color.green
-    case 40...45:
-        return Color.blue
-    default:
-        return Color.white
+    //번호 범위에 따른 번호 컬러
+    func getNumberColor( number: Int) -> Color {
+        switch number {
+        case 1...9:
+            return Color.red
+        case 10...19:
+            return Color.orange
+        case 20...29:
+            return Color.yellow
+        case 30...39:
+            return Color.green
+        case 40...45:
+            return Color.blue
+        default:
+            return Color.white
+        }
     }
-}
 
-//로또 당첨번호 함수
-func getWinNumbers() ->(sortWinNum: [Int], bonusNum: Int) {
-    
-    var winningSet: Set<Int> = []
-    
-    while winningSet.count < 7 {
-        winningSet.insert(Int.random(in: 1...45))
-    }
-    //set에서 배열로
-    var winningNubmer: [Int] = Array(winningSet)
-    let bonusNum = winningNubmer.last ?? 0
-    winningNubmer.removeLast()
-    let sortWinNum: [Int] = winningNubmer.sorted()
-    
-    return (sortWinNum, bonusNum)
-}
-//추첨번호
-func getLotteryNum() -> [[Int]] {
-    
-    var lotteryNumArray: [Set<Int>] = []
-    var lotteryNum: Set<Int>
-    for _  in 1...5 {
-        lotteryNum = []
+    //로또 당첨번호 함수
+    func getWinNumbers() ->(sortWinNum: [Int], bonusNum: Int) {
         
-        while lotteryNum.count < 6  {
-            lotteryNum.insert(Int.random(in: 1...45))
+        var winningSet: Set<Int> = []
+        
+        while winningSet.count < 7 {
+            winningSet.insert(Int.random(in: 1...45))
+        }
+        //set에서 배열로
+        var winningNubmer: [Int] = Array(winningSet)
+        let bonusNum = winningNubmer.last ?? 0
+        winningNubmer.removeLast()
+        let sortWinNum: [Int] = winningNubmer.sorted()
+        
+        return (sortWinNum, bonusNum)
+    }
+    //추첨번호
+    func getLotteryNum() -> [[Int]] {
+        
+        var lotteryNumArray: [Set<Int>] = []
+        var lotteryNum: Set<Int>
+        for _  in 1...5 {
+            lotteryNum = []
+            
+            while lotteryNum.count < 6  {
+                lotteryNum.insert(Int.random(in: 1...45))
+                
+            }
+            lotteryNumArray.append(lotteryNum)
             
         }
-        lotteryNumArray.append(lotteryNum)
+        
+        var sortedLotteryArray: [[Int]] = []
+        for lta in lotteryNumArray {
+            let sortedArray = lta.sorted()
+            sortedLotteryArray.append(sortedArray)
+        }
+        
+        return sortedLotteryArray
+        
         
     }
-    
-    var sortedLotteryArray: [[Int]] = []
-    for lta in lotteryNumArray {
-        let sortedArray = lta.sorted()
-        sortedLotteryArray.append(sortedArray)
+    //등수체크
+    func checkLottoResult(winningNumbers: [Int], bonusNumber: Int, entry: [Int]) -> String {
+        let winningNumberSet = Set(winningNumbers)
+        let numberOfCorrect = winningNumberSet.intersection(Set(entry)).count
+        
+        switch numberOfCorrect {
+        case 6:
+            return "1등!"
+        case 5:
+            return winningNumberSet.contains(bonusNumber) ? "2등" : "3등!"
+        case 4:
+            return "4등!"
+        case 3:
+            return "5등!"
+        default:
+            return "낙첨"
+        }
     }
-    
-    return sortedLotteryArray
-    
-    
-}
-//등수체크
-func checkLottoResult(winningNumbers: [Int], bonusNumber: Int, entry: [Int]) -> String {
-    let winningNumberSet = Set(winningNumbers)
-    let numberOfCorrect = winningNumberSet.intersection(Set(entry)).count
-    
-    switch numberOfCorrect {
-    case 6:
-        return "1등!"
-    case 5:
-        return winningNumberSet.contains(bonusNumber) ? "2등" : "3등!"
-    case 4:
-        return "4등!"
-    case 3:
-        return "5등!"
-    default:
-        return "낙첨"
-    }
+
 }
 
 
 #Preview {
-    LottoView()
+    MainTabView()
 }
