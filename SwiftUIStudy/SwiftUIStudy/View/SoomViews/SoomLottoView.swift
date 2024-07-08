@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct LottoView: View {
+struct SoomLottoView: View {
     @State private var lottoNumbers: Set<Int> = []
     @State private var arrayLottoNumbers: [Int] = []
     @State private var isToggleLotto: Bool = false
@@ -82,5 +82,5 @@ struct LottoView: View {
 }
 
 #Preview {
-    LottoView()
+    SoomLottoView()
 }
