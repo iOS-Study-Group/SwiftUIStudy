@@ -19,7 +19,7 @@ struct LipsView: View {
                     
                 }
                 
-                NavigationLink(destination: LottoView()) {
+                NavigationLink(destination: LipsLottoView()) {
                     Text("LottoView로 이동")
                     
                     
@@ -70,7 +70,7 @@ struct FirstView: View {
     }
 }
 
-struct LottoView: View {
+struct LipsLottoView: View {
     @State var winningNumbers: [Int] = []
     @State var bonusNumber: Int = 0
     @State var lotteryNumbers: [[Int]] = []
@@ -174,7 +174,7 @@ struct LottoView: View {
             return Color.white
         }
     }
-
+    
     //로또 당첨번호 함수
     func getWinNumbers() ->(sortWinNum: [Int], bonusNum: Int) {
         
@@ -235,7 +235,7 @@ struct LottoView: View {
             return "낙첨"
         }
     }
-
+    
 }
 
 
