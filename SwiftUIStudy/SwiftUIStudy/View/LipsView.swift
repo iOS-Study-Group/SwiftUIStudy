@@ -70,7 +70,7 @@ struct FirstView: View {
     }
 }
 
-struct LottoView: View {
+struct LipsLottoView: View {
     @State var winningNumbers: [Int] = []
     @State var bonusNumber: Int = 0
     @State var lotteryNumbers: [[Int]] = []

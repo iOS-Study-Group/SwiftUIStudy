@@ -60,7 +60,7 @@ struct SumchiveView: View {
                                     .padding(.bottom, 10)
                                 
                                 List {
-                                    NavigationLink(destination: LottoView()) {
+                                    NavigationLink(destination: SumchiveLottoView()) {
                                         Text("Lotto🎱 - 20240701")
                                             .font(.system(size: 20))
                                     }
