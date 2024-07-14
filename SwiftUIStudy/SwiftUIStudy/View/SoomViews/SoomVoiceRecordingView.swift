@@ -58,10 +58,9 @@ struct SoomVoiceRecordingView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing){
-                    Image(systemName: "bell.fill")
-                        .resizable()
-                        .frame(width: 15,height: 15)
-                        .foregroundStyle(.black)
+                    CustomSystemImageButton(systemName: "bell.fill", width: 15, height: 15, paddingSize: 0, foregroundColor: .black, isBackground: false){
+                        
+                    }
                 }
             }
         }
@@ -69,47 +68,24 @@ struct SoomVoiceRecordingView: View {
     @ViewBuilder
     func contentButton()-> some View{
         HStack{
-            Button{
+            CustomSystemImageButton(systemName: isPlay ? "stop" : "play", width: 15 , height: 15, paddingSize: 10, foregroundColor: isPlay ? .red : .black, isBackground: true){
                 isPlay.toggle()
                 recorder.playRecording(isPlay: isPlay)
-            }label: {
-                Image(systemName: isPlay ? "stop" : "play")
-                    .foregroundStyle( isPlay ? .red : .black)
-                    .padding(10)
-                    .background(
-                        Circle()
-                            .stroke()
-                            .fill(.black)
-                    )
             }
-            Button{
+            
+            CustomSystemImageButton(systemName: isRecording ? "stop.fill" : "mic", width: isRecording ? 35 : 25, height: 35, paddingSize: 30, foregroundColor: isRecording ? .red : .white, isBackground: true ){
                 isRecording.toggle()
                 recorder.startRecording(isRecord: isRecording)
-            }label: {
-                Image(systemName: isRecording ? "stop.fill" : "mic")
-                
-                    .resizable()
-                    .frame(width: isRecording ? 35 : 25,height: 35)
-                    .foregroundStyle(isRecording ? .red : .white)
-                    .aspectRatio(contentMode: .fit)
-                    .padding(30)
-                    .background(
-                        Circle()
-                            .fill(.black)
-                    )
-                    .padding(.horizontal,40)
-                    .animation(.smooth(duration: 0.1), value: isRecording)
-                    .shadow(color: isRecording ? .red.opacity(0.4) : .blue.opacity(0.4), radius: 20)
+                    
             }
-            Image(systemName: "xmark")
-                .resizable()
-                .frame(width: 15,height: 15)
-                .padding(10)
-                .background(
-                    Circle()
-                        .stroke()
-                        .fill(.black)
-                )
+            .background(.black)
+            .clipShape(Circle())
+            .padding(.horizontal,40)
+            .animation(.smooth(duration: 0.1), value: isRecording)
+            .shadow(color: isRecording ? .red.opacity(0.4) : .blue.opacity(0.4), radius: 20)
+            
+            CustomSystemImageButton(systemName: "xmark", width: 15, height: 15, paddingSize: 10, foregroundColor: .black, isBackground: true){
+            }
         }
     }
 }
