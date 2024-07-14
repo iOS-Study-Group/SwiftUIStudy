@@ -96,12 +96,8 @@ class Recorder: NSObject{
 
 extension Recorder: AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if !flag {
-            stopRecording()
-        }
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-//        isPlaying = false
     }
 }

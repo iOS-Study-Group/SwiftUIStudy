@@ -40,7 +40,8 @@ struct CustomSystemImageButton: View {
 }
 
 #Preview {
-    CustomSystemImageButton(systemName: "mic", width: 35, height: 35, paddingSize: 30, foregroundColor: .white, isBackground: true){
+    CustomSystemImageButton(systemName: "play", width: 35, height: 35, paddingSize: 30, foregroundColor: .black, isBackground: true){
+        
         
     }
 }
