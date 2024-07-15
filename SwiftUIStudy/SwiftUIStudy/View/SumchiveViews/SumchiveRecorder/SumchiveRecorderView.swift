@@ -112,21 +112,20 @@ struct RecordListView: View {
     @State private var recordFile: URL?
     
     var body: some View {
-        VStack{
-            //녹음파일 아예 없을 때
+//            녹음파일 아예 없을 때
             if voiceRecorder.recordFiles.isEmpty{
                 Text("There is no file")
                     .font(.title)
                     .fontWeight(.bold)
             }
-            
             //녹음파일 있을 때
             //녹음파일 리스트 보여주기
             else{
                 List(voiceRecorder.recordFiles, id: \.self) { file in
-                    //녹음파일명
-                    Text(file.lastPathComponent)
-                    VStack {
+                    HStack{
+                        //녹음파일명
+                        Text(file.lastPathComponent)
+                        Divider()
                         //녹음 파일 재생 / 종료 버튼
                         Button(action: {
                             
@@ -144,38 +143,29 @@ struct RecordListView: View {
                                 isPlaying = true
                                 recordFile = file
                             }
-                        }) {
+                        }){
                             //녹음파일 재생, 종료 아이콘
                             Image(systemName: isPlaying && recordFile == file ? "stop.circle" : "play.circle")
-                                .resizable()
-                                .frame(width: 25, height: 25)
-                                .padding(.leading,230)
                         }
-                    }
-                    .padding()
-                    
-                    //녹음 파일 삭제하기
-                    Button(action: {
-                        if isPlaying && recordFile == file {
-                            voiceRecorder.stopPlay()
-                            isPlaying = false
-                            recordFile = nil
+                        .padding()
+                        Divider()
+                        //녹음 파일 삭제하기
+                        Button(action: {
+                            if isPlaying && recordFile == file {
+                                voiceRecorder.stopPlay()
+                                isPlaying = false
+                                recordFile = nil
+                            }
+                            voiceRecorder.deleteFile(url: file)
+                        }) {
+                            Image(systemName: "trash.fill")
                         }
-                        voiceRecorder.deleteFile(url: file)
-                    }) {
-                        Image(systemName: "trash.fill")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .padding(.leading,245)
                     }
                 }
-                .padding(.vertical, 8)
-                .padding(.horizontal, 16)
                 .cornerRadius(8)
                 .scrollContentBackground(.hidden)
                 .background(Color.black.opacity(0.9))
             }
-        }
     }
 }
 #Preview {
