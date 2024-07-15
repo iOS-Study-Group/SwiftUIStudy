@@ -25,6 +25,7 @@
 		FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F7392C3CBA09002D24C1 /* mCalcView.swift */; };
 		FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */; };
 		FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */; };
+		FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FB56F7392C3CBA09002D24C1 /* mCalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mCalcView.swift; sourceTree = "<group>"; };
 		FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mLottoView.swift; sourceTree = "<group>"; };
 		FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mVoiceView.swift; sourceTree = "<group>"; };
+		FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAudioRecorderManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,22 +192,31 @@
 			path = SumchiveViews;
 			sourceTree = "<group>";
 		};
-		FB56F7382C3CB9F4002D24C1 /* MarbleView */ = {
+		FB56F7382C3CB9F4002D24C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FB56F7392C3CBA09002D24C1 /* mCalcView.swift */,
 				FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */,
 				FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */,
 			);
-			path = MarbleView;
+			path = View;
 			sourceTree = "<group>";
 		};
 		FB56F73F2C3CC533002D24C1 /* MarbleFiles */ = {
 			isa = PBXGroup;
 			children = (
-				FB56F7382C3CB9F4002D24C1 /* MarbleView */,
+				FB56F7402C3CC6C7002D24C1 /* Model */,
+				FB56F7382C3CB9F4002D24C1 /* View */,
 			);
 			path = MarbleFiles;
+			sourceTree = "<group>";
+		};
+		FB56F7402C3CC6C7002D24C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
+				FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
@@ -514,9 +526,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStudy/Preview Content\"";
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				DEVELOPMENT_TEAM = 733A2RXB59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "이 앱은 음성 녹음을 위해 마이크에 접근합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -544,9 +557,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStudy/Preview Content\"";
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				DEVELOPMENT_TEAM = 733A2RXB59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "이 앱은 음성 녹음을 위해 마이크에 접근합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
