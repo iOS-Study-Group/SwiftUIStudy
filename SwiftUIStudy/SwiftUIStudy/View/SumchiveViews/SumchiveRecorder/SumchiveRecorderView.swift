@@ -161,6 +161,7 @@ struct RecordListView: View {
                             Image(systemName: "trash.fill")
                         }
                     }
+                    .buttonStyle(BorderlessButtonStyle())
                 }
                 .cornerRadius(8)
                 .scrollContentBackground(.hidden)
