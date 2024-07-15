@@ -11,7 +11,10 @@ import SwiftUI
 struct SwiftUIStudyApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+//            MainTabView()
+            SumchiveRecorderView()
+//            VoiceMemoView()
+//            ContentView()
         }
     }
 }
