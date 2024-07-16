@@ -12,12 +12,14 @@ struct SRecordView: View {
     @StateObject var audioRecorderManager = AudioRecorderManager()
     @State var scale: CGFloat = 1.0
     @State var isAnimate: Bool = false
-    
+
     var body: some View {
         VStack {
             List {
                 ForEach(audioRecorderManager.recordedFiles, id: \.self) { recordedFile in
+                    
                     Button(action: {
+                        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
                         if audioRecorderManager.isRecording {
                             audioRecorderManager.stopRecording()
                             isAnimate = false
@@ -26,15 +28,17 @@ struct SRecordView: View {
                         
                         if audioRecorderManager.isPlaying {
                             audioRecorderManager.stopPlaying()
+                        } else {
+                            audioRecorderManager.startPlaying(recordingURL: recordedFile)
                         }
-                        
-                        audioRecorderManager.startPlaying(recordingURL: recordedFile)
-                        
                     }, label: {
-                        Text(recordedFile.lastPathComponent)
-                            .foregroundStyle(audioRecorderManager.isPlaying && audioRecorderManager.audioPlayer?.url == recordedFile ? .red : .black)
+                        Text(recordedFile.lastPathComponent).foregroundStyle(audioRecorderManager.isPlaying && audioRecorderManager.audioPlayer?.url == recordedFile ? .red : .black)
                     })
                 }
+                .onDelete(perform: { indexSet in
+                    audioRecorderManager.recordedFiles.remove(atOffsets: indexSet)
+                    audioRecorderManager.removeRecordedFile()
+                })
             }
             
             Text(String(format: "%02d:%02d:%02d", audioRecorderManager.hours, audioRecorderManager.minutes, audioRecorderManager.sec))
@@ -94,6 +98,7 @@ class AudioRecorderManager: NSObject, ObservableObject {
     var audioPlayer: AVAudioPlayer?
     var recordTimer: Timer?
     var timerString: String = ""
+    var filteringFiles = [URL]()
     var recordedFiles = [URL]()
     let session = AVAudioSession.sharedInstance()
     var hours: Int = 0, minutes: Int = 0, sec: Int = 0
@@ -140,8 +145,23 @@ class AudioRecorderManager: NSObject, ObservableObject {
     func stopRecording() {
         audioRecorder?.stop()
         recordedFiles.append(audioRecorder!.url)
+        filteringFiles.append(audioRecorder!.url)
         isRecording = false
         stopTimer()
+    }
+    
+    func removeRecordedFile() {
+        let newFilterFiles = filteringFiles.filter{recordedFiles.contains($0)}
+        let removeFileURLs = filteringFiles.filter{!recordedFiles.contains($0)}
+        
+        do {
+            for removeFileURL in removeFileURLs {
+                try FileManager.default.removeItem(at: removeFileURL)
+                filteringFiles = newFilterFiles
+            }
+        } catch {
+            print("remove error: \(error.localizedDescription)")
+        }
     }
     
     private func getDocumentsDirectory() -> URL {
@@ -169,6 +189,9 @@ class AudioRecorderManager: NSObject, ObservableObject {
                 self.getRecordingTime(self.audioPlayer?.currentTime ?? 0.0)
                 if self.audioPlayer?.isPlaying ?? false {
                     self.updateAudioLevels()
+                } else {
+                    self.isPlaying = false
+                    self.stopTimer()
                 }
             })
         } catch {
