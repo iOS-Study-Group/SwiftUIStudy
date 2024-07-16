@@ -103,6 +103,19 @@ class AudioRecorder: ObservableObject {
                  print("삭제가 불가능합니다ㅜㅜ")
              }
     }
+    
+    func removeFile(fileURL: URL) {
+        let file = FileManager.default
+        
+        do {
+            try file.removeItem(at: url)
+            if let index = recordedFiles.firstIndex(of: url) {
+                recordedFiles.remove(at: index)
+            }
+        } catch {
+            print("삭제 불가! ")
+        }
+    }
  
     
 }

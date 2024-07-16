@@ -23,6 +23,17 @@ struct recordFileView: View {
                     }, label: {
                         Text(Image(systemName: "play.fill"))
                     })
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(.trailing, 10)
+                    Divider()
+                   
+                    Button {
+                        recorder.removeFile(url: url)
+                    } label: {
+                        Text("삭제")
+                        
+                    }.buttonStyle(PlainButtonStyle())
+
                 }
             }
                 .onAppear {
