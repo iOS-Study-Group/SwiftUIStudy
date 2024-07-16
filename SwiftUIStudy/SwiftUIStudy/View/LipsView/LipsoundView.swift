@@ -43,7 +43,7 @@ struct LipsoundView: View {
             Button(action: {
                 recorder.removeAllFiles()
             }, label: {
-                Text("초기화")
+                Text("모든 파일 삭제")
             })
             
             

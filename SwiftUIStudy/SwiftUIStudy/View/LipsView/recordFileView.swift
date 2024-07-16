@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct recordFileView: View {
-//    @State private var fileURLs: [URL] = []
+
     @StateObject var recorder = AudioRecorder()
   
     var body: some View {
