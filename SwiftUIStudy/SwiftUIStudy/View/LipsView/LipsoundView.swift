@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AVFoundation
+
 //리스트에 저장해서 누르면 재생도 가능하게 구현해보자!
 struct LipsoundView: View {
     @StateObject var recorder = AudioRecorder()
