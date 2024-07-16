@@ -23,6 +23,7 @@
 		77063EC42C3E15D500660EBF /* SumchiveRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77063EC32C3E15D500660EBF /* SumchiveRecorderView.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
+		77AD9B882C46483700292D91 /* SumchiveLottoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AD9B872C46483700292D91 /* SumchiveLottoModel.swift */; };
 		77EBD2C22C3C07060036C093 /* SumchiveLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		77063EC32C3E15D500660EBF /* SumchiveRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveRecorderView.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
+		77AD9B872C46483700292D91 /* SumchiveLottoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveLottoModel.swift; sourceTree = "<group>"; };
 		77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveLottoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +161,7 @@
 		2C36302F2C2AD36C000FD762 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7702649D2C3ADA1200F8A065 /* SumchiveViews */,
+				7702649D2C3ADA1200F8A065 /* SumchiveFiles */,
 				2C36302D2C2AD35C000FD762 /* MarbleView.swift */,
 				7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */,
 				2C36302B2C2AD346000FD762 /* LipsView.swift */,
@@ -179,22 +181,31 @@
 			path = MainTabView;
 			sourceTree = "<group>";
 		};
-		7702649D2C3ADA1200F8A065 /* SumchiveViews */ = {
+		7702649D2C3ADA1200F8A065 /* SumchiveFiles */ = {
 			isa = PBXGroup;
 			children = (
-				77063EC02C3E156500660EBF /* SumchiveRecorder */,
+				77AD9B862C46474B00292D91 /* SumchiveModels */,
+				77AD9B852C46474100292D91 /* SumchiveViews */,
+			);
+			path = SumchiveFiles;
+			sourceTree = "<group>";
+		};
+		77AD9B852C46474100292D91 /* SumchiveViews */ = {
+			isa = PBXGroup;
+			children = (
 				77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */,
+				77063EC32C3E15D500660EBF /* SumchiveRecorderView.swift */,
 			);
 			path = SumchiveViews;
 			sourceTree = "<group>";
 		};
-		77063EC02C3E156500660EBF /* SumchiveRecorder */ = {
+		77AD9B862C46474B00292D91 /* SumchiveModels */ = {
 			isa = PBXGroup;
 			children = (
 				77063EC12C3E15C100660EBF /* SumchiveRecorderModel.swift */,
-				77063EC32C3E15D500660EBF /* SumchiveRecorderView.swift */,
+				77AD9B872C46483700292D91 /* SumchiveLottoModel.swift */,
 			);
-			path = SumchiveRecorder;
+			path = SumchiveModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
+				77AD9B882C46483700292D91 /* SumchiveLottoModel.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,

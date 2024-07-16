@@ -11,59 +11,14 @@ struct SumchiveLottoView: View {
     @State private var buttonClicked = false
     @State private var buttonClicked2 = false
     @State private var userLotto: [[Int]] = [
-        makeUserLotto(),
-        makeUserLotto(),
-        makeUserLotto(),
-        makeUserLotto(),
-        makeUserLotto()
+        LottoModel.makeUserLotto(),
+        LottoModel.makeUserLotto(),
+        LottoModel.makeUserLotto(),
+        LottoModel.makeUserLotto(),
+        LottoModel.makeUserLotto()
     ]
     
-    static func makeUserLotto() -> [Int] {
-        var randomLotto = Set<Int>()
-        
-        repeat {
-            randomLotto.insert(Int.random(in: 1...45))
-        } while randomLotto.count < 6
-        
-        return randomLotto.sorted()
-    }
-    
-    static func makeAnswerLotto() -> [Int] {
-        var randomLotto = Set<Int>()
-        
-        repeat {
-            randomLotto.insert(Int.random(in: 1...45))
-        } while randomLotto.count < 7
-        
-        return randomLotto.sorted()
-    }
-    
-    @State private var answerLotto: [Int] = makeAnswerLotto()
-    
-    func checkRank(_ userNumbers: [Int], with answerNumbers: [Int]) -> String? {
-        var count: Int = 0
-        
-        for number in userNumbers {
-            if answerNumbers.dropLast().contains(number) {
-                count += 1
-            }
-        }
-        if count == 6 {
-            return "1등"
-        } else if count == 5 {
-            if userNumbers.contains(answerNumbers[6]) {
-                return "2등"
-            } else {
-                return "3등"
-            }
-        } else if count == 4 {
-            return "4등"
-        } else if count == 3 {
-            return "5등"
-        } else {
-            return "꽝"
-        }
-    }
+    @State private var answerLotto: [Int] = LottoModel.makeAnswerLotto()
     
     var body: some View {
         VStack {
@@ -83,13 +38,13 @@ struct SumchiveLottoView: View {
             Button(action: {
                 buttonClicked = true
                 userLotto = [
-                    SumchiveLottoView.makeUserLotto(),
-                    SumchiveLottoView.makeUserLotto(),
-                    SumchiveLottoView.makeUserLotto(),
-                    SumchiveLottoView.makeUserLotto(),
-                    SumchiveLottoView.makeUserLotto()
+                    LottoModel.makeUserLotto(),
+                    LottoModel.makeUserLotto(),
+                    LottoModel.makeUserLotto(),
+                    LottoModel.makeUserLotto(),
+                    LottoModel.makeUserLotto()
                 ]
-                answerLotto = SumchiveLottoView.makeAnswerLotto()
+                answerLotto = LottoModel.makeAnswerLotto()
                 buttonClicked2 = false
             }, label: {
                 Text("번호뽑기")
@@ -112,7 +67,7 @@ struct SumchiveLottoView: View {
                                     .cornerRadius(5)
                             }
                             if buttonClicked2 {
-                                if let rank = checkRank(userLotto[index], with: answerLotto) {
+                                if let rank = LottoModel.checkRank(userLotto[index], with: answerLotto) {
                                     Text(rank)
                                         .font(.title2)
                                         .foregroundColor(.red)

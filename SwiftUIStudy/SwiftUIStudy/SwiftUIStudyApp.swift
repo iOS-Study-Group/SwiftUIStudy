@@ -13,6 +13,7 @@ struct SwiftUIStudyApp: App {
         WindowGroup {
 //            MainTabView()
             SumchiveRecorderView()
+            SumchiveLottoView()
 //            VoiceMemoView()
 //            ContentView()
         }
