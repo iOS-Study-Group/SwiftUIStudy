@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C261BFF2C43B25A00165225 /* CustomSystemImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C261BFE2C43B25A00165225 /* CustomSystemImageButton.swift */; };
 		2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C362FF92C2AD21D000FD762 /* SwiftUIStudyApp.swift */; };
 		2C362FFE2C2AD21E000FD762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C362FFD2C2AD21E000FD762 /* Assets.xcassets */; };
 		2C3630012C2AD21E000FD762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3630002C2AD21E000FD762 /* Preview Assets.xcassets */; };
@@ -18,7 +19,9 @@
 		2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630292C2AD326000FD762 /* ActIveView.swift */; };
 		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
-		2CCF619E2C3425B70091062C /* LottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF619D2C3425B70091062C /* LottoView.swift */; };
+		2C3FD1132C3EB60B00BB17E8 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FD1122C3EB60B00BB17E8 /* Recorder.swift */; };
+		2CAE474D2C3C144F002A28A3 /* SoomVoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE474C2C3C144F002A28A3 /* SoomVoiceRecordingView.swift */; };
+		2CCF619E2C3425B70091062C /* SoomLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF619D2C3425B70091062C /* SoomLottoView.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
 		77EBD2C22C3C07060036C093 /* SumchiveLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */; };
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C261BFE2C43B25A00165225 /* CustomSystemImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSystemImageButton.swift; sourceTree = "<group>"; };
 		2C362FF62C2AD21D000FD762 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C362FF92C2AD21D000FD762 /* SwiftUIStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStudyApp.swift; sourceTree = "<group>"; };
 		2C362FFD2C2AD21E000FD762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +60,10 @@
 		2C3630292C2AD326000FD762 /* ActIveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIveView.swift; sourceTree = "<group>"; };
 		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
-		2CCF619D2C3425B70091062C /* LottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoView.swift; sourceTree = "<group>"; };
+		2C3FD1122C3EB60B00BB17E8 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		2C692F8E2C4240D2000A664B /* SwiftUIStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIStudy.entitlements; sourceTree = "<group>"; };
+		2CAE474C2C3C144F002A28A3 /* SoomVoiceRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomVoiceRecordingView.swift; sourceTree = "<group>"; };
+		2CCF619D2C3425B70091062C /* SoomLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomLottoView.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
 		77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveLottoView.swift; sourceTree = "<group>"; };
@@ -90,7 +97,10 @@
 		2C1376162C382C4100CE1BC9 /* SoomViews */ = {
 			isa = PBXGroup;
 			children = (
-				2CCF619D2C3425B70091062C /* LottoView.swift */,
+				2C3FD1122C3EB60B00BB17E8 /* Recorder.swift */,
+				2CCF619D2C3425B70091062C /* SoomLottoView.swift */,
+				2CAE474C2C3C144F002A28A3 /* SoomVoiceRecordingView.swift */,
+				2C261BFE2C43B25A00165225 /* CustomSystemImageButton.swift */,
 			);
 			path = SoomViews;
 			sourceTree = "<group>";
@@ -118,6 +128,7 @@
 		2C362FF82C2AD21D000FD762 /* SwiftUIStudy */ = {
 			isa = PBXGroup;
 			children = (
+				2C692F8E2C4240D2000A664B /* SwiftUIStudy.entitlements */,
 				2C362FF92C2AD21D000FD762 /* SwiftUIStudyApp.swift */,
 				2C3630302C2AD372000FD762 /* MainTabView */,
 				2C36302F2C2AD36C000FD762 /* View */,
@@ -313,13 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAE474D2C3C144F002A28A3 /* SoomVoiceRecordingView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				77EBD2C22C3C07060036C093 /* SumchiveLottoView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
+				2C261BFF2C43B25A00165225 /* CustomSystemImageButton.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
-				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
+				2CCF619E2C3425B70091062C /* SoomLottoView.swift in Sources */,
+				2C3FD1132C3EB60B00BB17E8 /* Recorder.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
@@ -483,12 +497,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIStudy/SwiftUIStudy.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStudy/Preview Content\"";
 				DEVELOPMENT_TEAM = U4BQZ3AXAA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIStudy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자 마이크 접근 권한 설정";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -502,6 +522,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sueunkim.SwiftUIStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -513,12 +534,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIStudy/SwiftUIStudy.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStudy/Preview Content\"";
 				DEVELOPMENT_TEAM = U4BQZ3AXAA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIStudy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "사용자 마이크 접근 권한 설정";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -532,6 +559,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sueunkim.SwiftUIStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
