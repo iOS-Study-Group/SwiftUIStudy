@@ -2,7 +2,7 @@
 
 #### SwitUI Study를 위한 저장소
 
-## 👤 Members
+### 👤 Members
 | [Soom](https://github.com/sueunal) |[So0](https://github.com/Leesooooyoung) | [Lips](https://github.com/KimLips) |
 |:---:|:---:|:---:|
 | <img src="https://github.com/sueunal.png" width="150"> | <img src="https://github.com/Leesooooyoung.png" width="150"> | <img src="https://github.com/KimLips.png" width="150"> |
@@ -12,6 +12,9 @@
 |:---:|:---:|:---:|
 | <img src="https://github.com/sumchive.png" width="150"> | <img src="https://github.com/ActDine.png" width="150"> | <img src="https://github.com/kangsw1025.png" width="150"> |
 
+
+## 1주차 본인 탭뷰 꾸미기
+<img width="651" alt="스크린샷 2024-07-04 오후 1 06 06" src="https://github.com/iOS-Study-Group/SwiftUIStudy/assets/36671600/4615c901-7821-4509-8014-cb527c1a26f0">
 
 
 
