@@ -16,8 +16,6 @@
 ## 1주차 본인 탭뷰 꾸미기
 <img width="651" alt="스크린샷 2024-07-04 오후 1 06 06" src="https://github.com/iOS-Study-Group/SwiftUIStudy/assets/36671600/4615c901-7821-4509-8014-cb527c1a26f0">
 
-## 2주차 로또
-<img width="651" alt="스크린샷 2024-07-13 오전 2 37 05" src="https://github.com/user-attachments/assets/1dc606d3-32e2-4f1b-8aa8-63f2cfa86129">
 
 
 
