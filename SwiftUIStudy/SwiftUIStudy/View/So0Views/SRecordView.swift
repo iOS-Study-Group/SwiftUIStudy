@@ -6,6 +6,10 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import FirebaseDatabase
 import AVFoundation
 
 struct SRecordView: View {
@@ -17,29 +21,24 @@ struct SRecordView: View {
         VStack {
             List {
                 ForEach(audioRecorderManager.recordedFiles, id: \.self) { recordedFile in
-                    
                     Button(action: {
-                        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-                        if audioRecorderManager.isRecording {
-                            audioRecorderManager.stopRecording()
-                            isAnimate = false
-                            scale = 1.0
-                        }
-                        
                         if audioRecorderManager.isPlaying {
                             audioRecorderManager.stopPlaying()
                         } else {
-                            audioRecorderManager.startPlaying(recordingURL: recordedFile)
+                            audioRecorderManager.startPlaying(recordedFile: recordedFile)
                         }
                     }, label: {
-                        Text(recordedFile.lastPathComponent).foregroundStyle(audioRecorderManager.isPlaying && audioRecorderManager.audioPlayer?.url == recordedFile ? .red : .black)
+                        Text(recordedFile).foregroundStyle(audioRecorderManager.isPlaying && audioRecorderManager.audioPlayer?.url?.lastPathComponent == recordedFile ? .red : .black)
                     })
+                    .deleteDisabled(audioRecorderManager.isRecording)
+                    
                 }
                 .onDelete(perform: { indexSet in
                     audioRecorderManager.recordedFiles.remove(atOffsets: indexSet)
                     audioRecorderManager.removeRecordedFile()
                 })
             }
+            .disabled(audioRecorderManager.isRecording)
             
             Text(String(format: "%02d:%02d:%02d", audioRecorderManager.hours, audioRecorderManager.minutes, audioRecorderManager.sec))
                 .font(.largeTitle)
@@ -98,12 +97,13 @@ class AudioRecorderManager: NSObject, ObservableObject {
     var audioPlayer: AVAudioPlayer?
     var recordTimer: Timer?
     var timerString: String = ""
-    var filteringFiles = [URL]()
-    var recordedFiles = [URL]()
+    var fileName: String = ""
+    var recordedFiles = [String]()
     let session = AVAudioSession.sharedInstance()
     var hours: Int = 0, minutes: Int = 0, sec: Int = 0
     var totalTime: Float = 0.0
     var timeInterval: TimeInterval = 0.2
+    let arfm = AudioRecorderFirebaseManager()
     
     func startRecording() {
         do {
@@ -116,7 +116,8 @@ class AudioRecorderManager: NSObject, ObservableObject {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd.HH:mm:ss"
         let nowDate: String = dateFormatter.string(from: Date())
-        let fileURL = getDocumentsDirectory().appendingPathComponent("voice-\(nowDate).m4a")
+        fileName = "voice-\(nowDate).m4a"
+        let fileURL = getDocumentsDirectory().appendingPathComponent(fileName)
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
@@ -144,20 +145,48 @@ class AudioRecorderManager: NSObject, ObservableObject {
     
     func stopRecording() {
         audioRecorder?.stop()
-        recordedFiles.append(audioRecorder!.url)
-        filteringFiles.append(audioRecorder!.url)
+        setRecoredFiles()
         isRecording = false
         stopTimer()
+        let audioData =  try? Data(contentsOf: (audioRecorder?.url)!)
+        let encodedString = audioData?.base64EncodedString()
+        guard let encodedString = encodedString else {
+            print("Fail to encode")
+            return
+        }
+        Task {
+            await arfm.saveOnFirebase(fileName, encodedString)
+        }
+    }
+    
+    func setRecoredFiles() {
+        let documentsURL = getDocumentsDirectory()
+        
+        do {
+            recordedFiles = try FileManager.default.contentsOfDirectory(atPath: documentsURL.path())
+        } catch {
+            print("Fail to read  in local files")
+        }
     }
     
     func removeRecordedFile() {
-        let newFilterFiles = filteringFiles.filter{recordedFiles.contains($0)}
-        let removeFileURLs = filteringFiles.filter{!recordedFiles.contains($0)}
-        
+        let documentsURL = getDocumentsDirectory()
         do {
-            for removeFileURL in removeFileURLs {
-                try FileManager.default.removeItem(at: removeFileURL)
-                filteringFiles = newFilterFiles
+            let filter = try FileManager.default.contentsOfDirectory(atPath: documentsURL.path())
+            let removeFilesOnFirebase = filter.filter{!arfm.recordedFiles.contains($0)}
+            // firebase에 저장 파일과 로컬 파일 동기화(로컬에 없는데 파이어 베이스에 있을 경우 해당 파일 삭제)
+            for removeFile in removeFilesOnFirebase {
+                Task {
+                    await arfm.removeOnFirebase(removeFile)
+                }
+            }
+            let removeFilesInLocal = filter.filter{!recordedFiles.contains($0)}
+            for removeFile in removeFilesInLocal {
+                let fileURL = getDocumentsDirectory().appendingPathComponent(removeFile)
+                try FileManager.default.removeItem(at: fileURL)
+                Task {
+                    await arfm.removeOnFirebase(removeFile)
+                }
             }
         } catch {
             print("remove error: \(error.localizedDescription)")
@@ -169,16 +198,16 @@ class AudioRecorderManager: NSObject, ObservableObject {
         return documentsURL
     }
     
-    func startPlaying(recordingURL: URL) {
+    func startPlaying(recordedFile: String) {
         let playSession = AVAudioSession.sharedInstance()
+        let fileURL = getDocumentsDirectory().appendingPathComponent(recordedFile)
         do {
             try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
         } catch {
             print("play error: \(error.localizedDescription)")
         }
-        
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: recordingURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
             audioPlayer?.prepareToPlay()
             audioPlayer?.isMeteringEnabled = true
             audioPlayer?.play()
@@ -224,13 +253,48 @@ class AudioRecorderManager: NSObject, ObservableObject {
         if isRecording {
             audioRecorder?.updateMeters()
             if let averagePower = audioRecorder?.averagePower(forChannel: 0) {
-                audioLevels.append(65 + max(CGFloat(averagePower), -70))
+                audioLevels.append(65 + max(CGFloat(averagePower), -60))
             }
         } else if isPlaying {
             audioPlayer?.updateMeters()
             if let averagePower = audioPlayer?.averagePower(forChannel: 0) {
-                audioLevels.append(65 + max(CGFloat(averagePower), -70))
+                audioLevels.append(65 + max(CGFloat(averagePower), -60))
             }
+        }
+    }
+}
+
+struct AudioRecorderFirebaseManager {
+    let db = Firestore.firestore()
+    let collection: String = "voice_folder"
+    var recordedFiles = [String]()
+    
+    func saveOnFirebase(_ fileName: String, _ voiceData: String) async {
+        do {
+            try await db.collection(collection).document(fileName).setData(["data": "\(voiceData)"])
+        } catch {
+            print("Error writing document: \(error)")
+        }
+    }
+    
+    func removeOnFirebase(_ fileName: String) async {
+        do {
+          try await db.collection(collection).document(fileName).delete()
+        } catch {
+            print("Error removing document: \(error)")
+        }
+    }
+    
+    mutating func getVoiceFilesOnFirebase() async {
+        do {
+            let documents = try await db.collection(collection).getDocuments()
+            for document in documents.documents {
+                // document.documentID 파일 이름
+                // document.data() 딕셔너리로 저장한 음성 데이터
+                self.recordedFiles.append(document.documentID)
+            }
+        } catch {
+            print("Error getting document: \(error)")
         }
     }
 }
