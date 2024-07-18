@@ -8,15 +8,9 @@
 import SwiftUI
 import AVFoundation
 
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAuth
-import FirebaseDatabase
 
 
 class StorageManager{
-    let storageRef = Firestore.firestore()
-
     init(){
        adioFileUpload()
     }
@@ -29,7 +23,6 @@ class Recorder: NSObject{
     private var audioPlayer: AVAudioPlayer?
     private var audioSession: AVAudioSession!
     private var audioRecorder: AVAudioRecorder?
-    let storage = StorageManager()
     
     let filename: URL
     

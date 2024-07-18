@@ -16,15 +16,18 @@
 		2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630232C2AD2CA000FD762 /* SoomView.swift */; };
 		2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630252C2AD2DB000FD762 /* So0View.swift */; };
 		2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630292C2AD326000FD762 /* ActIveView.swift */; };
-		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
+		2C98605F2C496F49007CD236 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98605B2C496F49007CD236 /* ModalView.swift */; };
+		2C9860602C496F49007CD236 /* recordFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98605C2C496F49007CD236 /* recordFileView.swift */; };
+		2C9860612C496F49007CD236 /* LipsoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98605D2C496F49007CD236 /* LipsoundView.swift */; };
+		2C9860622C496F49007CD236 /* SoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98605E2C496F49007CD236 /* SoundRecord.swift */; };
+		2C9860662C496FB2007CD236 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9860652C496FB2007CD236 /* LipsView.swift */; };
+		2C98606A2C4970A2007CD236 /* SoomVoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9860672C4970A2007CD236 /* SoomVoiceRecordingView.swift */; };
+		2C98606B2C4970A2007CD236 /* CustomSystemImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9860682C4970A2007CD236 /* CustomSystemImageButton.swift */; };
+		2C98606C2C4970A2007CD236 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9860692C4970A2007CD236 /* Recorder.swift */; };
 		2CCF619E2C3425B70091062C /* LottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF619D2C3425B70091062C /* LottoView.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
-		F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD6452C3FCE58008399E4 /* SoundRecord.swift */; };
-		F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7CA6B2C410882009D0B69 /* recordFileView.swift */; };
-		F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */; };
-		F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F2F8372C44F43C007F83D7 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +60,18 @@
 		2C3630232C2AD2CA000FD762 /* SoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomView.swift; sourceTree = "<group>"; };
 		2C3630252C2AD2DB000FD762 /* So0View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = So0View.swift; sourceTree = "<group>"; };
 		2C3630292C2AD326000FD762 /* ActIveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIveView.swift; sourceTree = "<group>"; };
-		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
+		2C98605B2C496F49007CD236 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		2C98605C2C496F49007CD236 /* recordFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordFileView.swift; sourceTree = "<group>"; };
+		2C98605D2C496F49007CD236 /* LipsoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsoundView.swift; sourceTree = "<group>"; };
+		2C98605E2C496F49007CD236 /* SoundRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundRecord.swift; sourceTree = "<group>"; };
+		2C9860652C496FB2007CD236 /* LipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
+		2C9860672C4970A2007CD236 /* SoomVoiceRecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomVoiceRecordingView.swift; sourceTree = "<group>"; };
+		2C9860682C4970A2007CD236 /* CustomSystemImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSystemImageButton.swift; sourceTree = "<group>"; };
+		2C9860692C4970A2007CD236 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		2CCF619D2C3425B70091062C /* LottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoView.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
-		F65FD6452C3FCE58008399E4 /* SoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecord.swift; sourceTree = "<group>"; };
-		F6B7CA6B2C410882009D0B69 /* recordFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordFileView.swift; sourceTree = "<group>"; };
-		F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsoundView.swift; sourceTree = "<group>"; };
-		F6F2F8372C44F43C007F83D7 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C72F64E2C4943310055231C /* FirebaseDatabaseSwift in Frameworks */,
-				2C72F6462C49426C0055231C /* FirebaseAuth in Frameworks */,
-				2C72F63C2C4942540055231C /* FirebaseAnalytics in Frameworks */,
-				2C72F6482C49427C0055231C /* FirebaseDatabase in Frameworks */,
-				2C72F64A2C49429C0055231C /* FirebaseFirestoreSwift in Frameworks */,
-				2C72F64C2C49432B0055231C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +102,9 @@
 		2C1376162C382C4100CE1BC9 /* SoomViews */ = {
 			isa = PBXGroup;
 			children = (
+				2C9860682C4970A2007CD236 /* CustomSystemImageButton.swift */,
+				2C9860692C4970A2007CD236 /* Recorder.swift */,
+				2C9860672C4970A2007CD236 /* SoomVoiceRecordingView.swift */,
 				2CCF619D2C3425B70091062C /* LottoView.swift */,
 			);
 			path = SoomViews;
@@ -114,7 +117,6 @@
 				2C3630092C2AD21E000FD762 /* SwiftUIStudyTests */,
 				2C3630132C2AD21E000FD762 /* SwiftUIStudyUITests */,
 				2C362FF72C2AD21D000FD762 /* Products */,
-				2CD3BA372C493E31004060E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,8 +171,8 @@
 			children = (
 				2C36302D2C2AD35C000FD762 /* MarbleView.swift */,
 				2C3630292C2AD326000FD762 /* ActIveView.swift */,
+				2C9860652C496FB2007CD236 /* LipsView.swift */,
 				F6D9B0482C3C054E002EBBB9 /* LipsView */,
-				2C36302B2C2AD346000FD762 /* LipsView.swift */,
 				2C3630252C2AD2DB000FD762 /* So0View.swift */,
 				2C3630232C2AD2CA000FD762 /* SoomView.swift */,
 				2C1376162C382C4100CE1BC9 /* SoomViews */,
@@ -191,10 +193,10 @@
 		F6D9B0482C3C054E002EBBB9 /* LipsView */ = {
 			isa = PBXGroup;
 			children = (
-				F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */,
-				F65FD6452C3FCE58008399E4 /* SoundRecord.swift */,
-				F6B7CA6B2C410882009D0B69 /* recordFileView.swift */,
-				F6F2F8372C44F43C007F83D7 /* ModalView.swift */,
+				2C98605D2C496F49007CD236 /* LipsoundView.swift */,
+				2C98605B2C496F49007CD236 /* ModalView.swift */,
+				2C98605C2C496F49007CD236 /* recordFileView.swift */,
+				2C98605E2C496F49007CD236 /* SoundRecord.swift */,
 			);
 			path = LipsView;
 			sourceTree = "<group>";
@@ -216,12 +218,6 @@
 			);
 			name = SwiftUIStudy;
 			packageProductDependencies = (
-				2C72F63B2C4942540055231C /* FirebaseAnalytics */,
-				2C72F6452C49426C0055231C /* FirebaseAuth */,
-				2C72F6472C49427C0055231C /* FirebaseDatabase */,
-				2C72F6492C49429C0055231C /* FirebaseFirestoreSwift */,
-				2C72F64B2C49432B0055231C /* FirebaseFirestore */,
-				2C72F64D2C4943310055231C /* FirebaseDatabaseSwift */,
 			);
 			productName = SwiftUIStudy;
 			productReference = 2C362FF62C2AD21D000FD762 /* SwiftUIStudy.app */;
@@ -340,19 +336,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
+				2C9860662C496FB2007CD236 /* LipsView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
-				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
+				2C98606A2C4970A2007CD236 /* SoomVoiceRecordingView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
-				F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */,
+				2C98605F2C496F49007CD236 /* ModalView.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
-				F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */,
-				F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
+				2C9860622C496F49007CD236 /* SoundRecord.swift in Sources */,
+				2C98606B2C4970A2007CD236 /* CustomSystemImageButton.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
+				2C9860602C496F49007CD236 /* recordFileView.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
+				2C9860612C496F49007CD236 /* LipsoundView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
+				2C98606C2C4970A2007CD236 /* Recorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,39 +694,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2C72F63B2C4942540055231C /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CD3BA2C2C493BA6004060E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		2C72F6452C49426C0055231C /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CD3BA2C2C493BA6004060E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		2C72F6472C49427C0055231C /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CD3BA2C2C493BA6004060E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		2C72F6492C49429C0055231C /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CD3BA2C2C493BA6004060E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-		2C72F64B2C49432B0055231C /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CD3BA2C2C493BA6004060E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		2C72F64D2C4943310055231C /* FirebaseDatabaseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2CD3BA2C2C493BA6004060E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabaseSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C362FEE2C2AD21D000FD762 /* Project object */;
 }
