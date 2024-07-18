@@ -8,7 +8,9 @@
 import SwiftUI
 
 
+
 struct LipsView: View {
+    
     var body: some View {
         NavigationStack {
             List {
@@ -26,6 +28,7 @@ struct LipsView: View {
                     Text("LipsoundView로이동")
                 }
                 .navigationTitle("SuperMari5")
+                
             }
         }
     }
