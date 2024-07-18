@@ -28,7 +28,7 @@ struct recordFileView: View {
                     Divider()
                    
                     Button {
-                        recorder.removeFile(url: url)
+//                        recorder.removeFile(url: url)
                     } label: {
                         Text("삭제")
                         
