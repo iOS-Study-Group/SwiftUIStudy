@@ -25,6 +25,11 @@
 		F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7CA6B2C410882009D0B69 /* recordFileView.swift */; };
 		F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */; };
 		F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F2F8372C44F43C007F83D7 /* ModalView.swift */; };
+		77EBD2C22C3C07060036C093 /* SumchiveLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */; };
+		FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F7392C3CBA09002D24C1 /* mCalcView.swift */; };
+		FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */; };
+		FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */; };
+		FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		F6B7CA6B2C410882009D0B69 /* recordFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordFileView.swift; sourceTree = "<group>"; };
 		F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsoundView.swift; sourceTree = "<group>"; };
 		F6F2F8372C44F43C007F83D7 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveLottoView.swift; sourceTree = "<group>"; };
+		FB56F7392C3CBA09002D24C1 /* mCalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mCalcView.swift; sourceTree = "<group>"; };
+		FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mLottoView.swift; sourceTree = "<group>"; };
+		FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mVoiceView.swift; sourceTree = "<group>"; };
+		FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAudioRecorderManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +174,7 @@
 				2C36302D2C2AD35C000FD762 /* MarbleView.swift */,
 				2C3630292C2AD326000FD762 /* ActIveView.swift */,
 				F6D9B0482C3C054E002EBBB9 /* LipsView */,
+				FB56F73F2C3CC533002D24C1 /* MarbleFiles */,
 				2C36302B2C2AD346000FD762 /* LipsView.swift */,
 				2C3630252C2AD2DB000FD762 /* So0View.swift */,
 				2C3630232C2AD2CA000FD762 /* SoomView.swift */,
@@ -190,6 +201,33 @@
 				F6F2F8372C44F43C007F83D7 /* ModalView.swift */,
 			);
 			path = LipsView;
+			sourceTree = "<group>";
+		};
+		FB56F7382C3CB9F4002D24C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB56F7392C3CBA09002D24C1 /* mCalcView.swift */,
+				FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */,
+				FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB56F73F2C3CC533002D24C1 /* MarbleFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FB56F7402C3CC6C7002D24C1 /* Model */,
+				FB56F7382C3CB9F4002D24C1 /* View */,
+			);
+			path = MarbleFiles;
+			sourceTree = "<group>";
+		};
+		FB56F7402C3CC6C7002D24C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,10 +366,14 @@
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
 				F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */,
+				FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
 				F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */,
 				F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */,
+				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
+				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
+				FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
@@ -498,9 +540,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStudy/Preview Content\"";
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				DEVELOPMENT_TEAM = 733A2RXB59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "이 앱은 음성 녹음을 위해 마이크에 접근합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -528,9 +571,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStudy/Preview Content\"";
-				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				DEVELOPMENT_TEAM = 733A2RXB59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "이 앱은 음성 녹음을 위해 마이크에 접근합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
