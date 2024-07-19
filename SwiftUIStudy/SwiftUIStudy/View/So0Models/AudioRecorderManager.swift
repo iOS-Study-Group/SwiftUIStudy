@@ -72,8 +72,16 @@ class AudioRecorderManager: NSObject, ObservableObject {
         setRecoredFiles()
         isRecording = false
         stopTimer()
-        Task {
-            await arfm.saveOnFirebaseStorage((audioRecorder?.url)!)
+        Task { // 로컬에만 저장 된 파일을 클라우드에도 추가해준다(동기화)
+            await arfm.getVoiceFilesOnFirebaseStorage()
+            let localFiles = extractURLLastcomponents(recordedFiles)
+            let cloudFiles = extractURLLastcomponents(arfm.recordedFiles)
+            let filteredFiles = localFiles.filter{!cloudFiles.contains($0)}
+            for recordedFile in recordedFiles {
+                if filteredFiles.contains(recordedFile.lastPathComponent) {
+                    await arfm.saveOnFirebaseStorage(recordedFile)
+                }
+            }
         }
     }
     
