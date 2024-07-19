@@ -23,6 +23,9 @@
 		2CF34EFD2C49FC6D0049F6A4 /* SumchiveRecorderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34EF62C49FC6D0049F6A4 /* SumchiveRecorderModel.swift */; };
 		2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34EF82C49FC6D0049F6A4 /* SumchiveLottoView.swift */; };
 		2CF34EFF2C49FC6D0049F6A4 /* SumchiveRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34EF92C49FC6D0049F6A4 /* SumchiveRecorderView.swift */; };
+		2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F042C4A25950049F6A4 /* Recorder.swift */; };
+		2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */; };
+		2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
 		F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD6452C3FCE58008399E4 /* SoundRecord.swift */; };
@@ -72,6 +75,9 @@
 		2CF34EF62C49FC6D0049F6A4 /* SumchiveRecorderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumchiveRecorderModel.swift; sourceTree = "<group>"; };
 		2CF34EF82C49FC6D0049F6A4 /* SumchiveLottoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumchiveLottoView.swift; sourceTree = "<group>"; };
 		2CF34EF92C49FC6D0049F6A4 /* SumchiveRecorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumchiveRecorderView.swift; sourceTree = "<group>"; };
+		2CF34F042C4A25950049F6A4 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomVoiceRecordingView.swift; sourceTree = "<group>"; };
+		2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSystemImageButton.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
 		F65FD6452C3FCE58008399E4 /* SoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecord.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 		2C1376162C382C4100CE1BC9 /* SoomViews */ = {
 			isa = PBXGroup;
 			children = (
+				2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */,
+				2CF34F042C4A25950049F6A4 /* Recorder.swift */,
+				2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */,
 				2CCF619D2C3425B70091062C /* LottoView.swift */,
 			);
 			path = SoomViews;
@@ -397,6 +406,7 @@
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
+				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
 				F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */,
@@ -408,10 +418,12 @@
 				2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */,
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
+				2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
 				FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */,
 				2CF34EFF2C49FC6D0049F6A4 /* SumchiveRecorderView.swift in Sources */,
+				2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,

@@ -31,8 +31,7 @@ struct SoomView: View {
                         }
                         .padding()
                         Spacer()
-                        Image("Swift")
-                            .resizable()
+                        Image("Swift")                            .resizable()
                             .frame(width: 50,height: 50)
                             .padding()
                     }
