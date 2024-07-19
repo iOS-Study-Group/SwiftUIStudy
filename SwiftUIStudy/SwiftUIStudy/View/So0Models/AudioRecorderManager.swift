@@ -17,13 +17,17 @@ class AudioRecorderManager: NSObject, ObservableObject {
     var recordTimer: Timer?
     var timerString: String = ""
     var fileName: String = ""
-    var recordedFiles = [String]()
-    var recordedData = [Data]()
+    var recordedFiles = [URL]()
     let session = AVAudioSession.sharedInstance()
     var hours: Int = 0, minutes: Int = 0, sec: Int = 0
     var totalTime: Float = 0.0
     var timeInterval: TimeInterval = 0.2
     var arfm = AudioRecorderFirebaseManager()
+    
+    override init() {
+        super.init()
+        self.setRecoredFiles()
+    }
     
     func startRecording() {
         do {
@@ -69,15 +73,14 @@ class AudioRecorderManager: NSObject, ObservableObject {
         isRecording = false
         stopTimer()
         Task {
-            await arfm.saveOnFirebaseStorage(fileName, (audioRecorder?.url)!)
+            await arfm.saveOnFirebaseStorage((audioRecorder?.url)!)
         }
     }
     
-    func setRecoredFiles() {
+    func setRecoredFiles() { // 클라우드에만 있는 파일도 추가해준다(동기화)
         let documentsURL = getDocumentsDirectory()
-        
         do {
-            recordedFiles = try FileManager.default.contentsOfDirectory(atPath: documentsURL.path())
+            recordedFiles = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: [.isDirectoryKey])
         } catch {
             print("Fail to read  in local files")
         }
@@ -86,13 +89,21 @@ class AudioRecorderManager: NSObject, ObservableObject {
     func removeRecordedFile() {
         let documentsURL = getDocumentsDirectory()
         do {
-            let filter = try FileManager.default.contentsOfDirectory(atPath: documentsURL.path())
+            let filter = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: [.isDirectoryKey])
             let removeFilesInLocal = filter.filter{!recordedFiles.contains($0)}
-            for removeFile in removeFilesInLocal {
-                let fileURL = getDocumentsDirectory().appendingPathComponent(removeFile)
-                try FileManager.default.removeItem(at: fileURL)
-                Task {
-                    await arfm.removeOnFirebaseStorage(removeFile)
+            for removeFile in removeFilesInLocal { // 로컬 파일을 먼저 지운다
+                try FileManager.default.removeItem(at: removeFile)
+            }
+            Task { // 클라우드 파일 삭제
+                await arfm.getVoiceFilesOnFirebaseStorage()
+                // 클라우드 주소를 가져오기 때문에 파일 이름으로만 비교한다
+                let localFiles = extractURLLastcomponents(recordedFiles)
+                let cloudFiles = extractURLLastcomponents(arfm.recordedFiles)
+                let filteredFiles = cloudFiles.filter{!localFiles.contains($0)}
+                for recordedFile in arfm.recordedFiles {
+                    if filteredFiles.contains(recordedFile.lastPathComponent) {
+                        await arfm.removeOnFirebaseStorage(recordedFile)
+                    }
                 }
             }
         } catch {
@@ -105,16 +116,15 @@ class AudioRecorderManager: NSObject, ObservableObject {
         return documentsURL
     }
     
-    func startPlaying(recordedFile: String) {
+    func startPlaying(recordedFile: URL) {
         let playSession = AVAudioSession.sharedInstance()
-        let fileURL = getDocumentsDirectory().appendingPathComponent(recordedFile)
         do {
             try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
         } catch {
             print("play error: \(error.localizedDescription)")
         }
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+            audioPlayer = try AVAudioPlayer(contentsOf: recordedFile)
             audioPlayer?.prepareToPlay()
             audioPlayer?.isMeteringEnabled = true
             audioPlayer?.play()
@@ -168,5 +178,13 @@ class AudioRecorderManager: NSObject, ObservableObject {
                 audioLevels.append(65 + max(CGFloat(averagePower), -60))
             }
         }
+    }
+    
+    func extractURLLastcomponents(_ urls: [URL]) -> [String] {
+        var paths: [String] = []
+        for url in urls {
+            paths.append(url.lastPathComponent)
+        }
+        return paths
     }
 }

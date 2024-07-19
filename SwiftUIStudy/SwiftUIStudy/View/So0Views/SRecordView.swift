@@ -23,7 +23,7 @@ struct SRecordView: View {
                             audioRecorderManager.startPlaying(recordedFile: recordedFile)
                         }
                     }, label: {
-                        Text(recordedFile).foregroundStyle(audioRecorderManager.isPlaying && audioRecorderManager.audioPlayer?.url?.lastPathComponent == recordedFile ? .red : .black)
+                        Text(recordedFile.lastPathComponent).foregroundStyle(audioRecorderManager.isPlaying && audioRecorderManager.audioPlayer?.url == recordedFile ? .red : .black)
                     })
                     .deleteDisabled(audioRecorderManager.isRecording)
                     
