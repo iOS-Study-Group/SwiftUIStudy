@@ -19,7 +19,8 @@
 		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
 		2CCF619E2C3425B70091062C /* LottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF619D2C3425B70091062C /* LottoView.swift */; };
-		6E3EEF942C47719B00E82657 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E3EEF932C47719B00E82657 /* GoogleService-Info.plist */; };
+		6E1B58112C48F68700B6BA06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E1B58102C48F68700B6BA06 /* GoogleService-Info.plist */; };
+		6E1B58132C48FEC900B6BA06 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6E1B58122C48FEC900B6BA06 /* FirebaseStorage */; };
 		6E3EEF982C47742B00E82657 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3EEF972C47742B00E82657 /* FirebaseAnalytics */; };
 		6E3EEF9A2C47755B00E82657 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3EEF992C47755B00E82657 /* FirebaseFirestoreSwift */; };
 		6E3EEF9C2C47758400E82657 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3EEF9B2C47758400E82657 /* FirebaseFirestore */; };
@@ -27,7 +28,9 @@
 		6E3EEFA02C47768100E82657 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3EEF9F2C47768100E82657 /* FirebaseDatabase */; };
 		6E3EEFA22C47768100E82657 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3EEFA12C47768100E82657 /* FirebaseDatabaseSwift */; };
 		6E6E39CC2C3EE50100FFAEDB /* SLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E39CB2C3EE50100FFAEDB /* SLottoView.swift */; };
-		6E6E39CE2C3EE56A00FFAEDB /* SRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6E39CD2C3EE56A00FFAEDB /* SRecordView.swift */; };
+		6E9F7BAA2C49EE0B00FA691D /* SRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F7BA92C49EE0B00FA691D /* SRecordView.swift */; };
+		6E9F7BAD2C49F22C00FA691D /* AudioRecorderFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F7BAC2C49F22C00FA691D /* AudioRecorderFirebaseManager.swift */; };
+		6E9F7BAF2C49F35B00FA691D /* AudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F7BAE2C49F35B00FA691D /* AudioRecorderManager.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
 		77EBD2C22C3C07060036C093 /* SumchiveLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */; };
@@ -66,9 +69,11 @@
 		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
 		2CCF619D2C3425B70091062C /* LottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoView.swift; sourceTree = "<group>"; };
-		6E3EEF932C47719B00E82657 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E1B58102C48F68700B6BA06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E6E39CB2C3EE50100FFAEDB /* SLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLottoView.swift; sourceTree = "<group>"; };
-		6E6E39CD2C3EE56A00FFAEDB /* SRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRecordView.swift; sourceTree = "<group>"; };
+		6E9F7BA92C49EE0B00FA691D /* SRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRecordView.swift; sourceTree = "<group>"; };
+		6E9F7BAC2C49F22C00FA691D /* AudioRecorderFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderFirebaseManager.swift; sourceTree = "<group>"; };
+		6E9F7BAE2C49F35B00FA691D /* AudioRecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
 		77EBD2C12C3C07060036C093 /* SumchiveLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveLottoView.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 				6E3EEFA02C47768100E82657 /* FirebaseDatabase in Frameworks */,
 				6E3EEF982C47742B00E82657 /* FirebaseAnalytics in Frameworks */,
 				6E3EEF9A2C47755B00E82657 /* FirebaseFirestoreSwift in Frameworks */,
+				6E1B58132C48FEC900B6BA06 /* FirebaseStorage in Frameworks */,
 				6E3EEF9C2C47758400E82657 /* FirebaseFirestore in Frameworks */,
 				6E3EEF9E2C47759400E82657 /* FirebaseAuth in Frameworks */,
 			);
@@ -141,7 +147,7 @@
 				2C3630302C2AD372000FD762 /* MainTabView */,
 				2C36302F2C2AD36C000FD762 /* View */,
 				2C362FFD2C2AD21E000FD762 /* Assets.xcassets */,
-				6E3EEF932C47719B00E82657 /* GoogleService-Info.plist */,
+				6E1B58102C48F68700B6BA06 /* GoogleService-Info.plist */,
 				2C362FFF2C2AD21E000FD762 /* Preview Content */,
 			);
 			path = SwiftUIStudy;
@@ -181,6 +187,7 @@
 				2C3630292C2AD326000FD762 /* ActIveView.swift */,
 				2C3630252C2AD2DB000FD762 /* So0View.swift */,
 				6E6E39CA2C3EE4D900FFAEDB /* So0Views */,
+				6E9F7BAB2C49F1EA00FA691D /* So0Models */,
 				2C3630232C2AD2CA000FD762 /* SoomView.swift */,
 				2C1376162C382C4100CE1BC9 /* SoomViews */,
 				7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */,
@@ -207,9 +214,18 @@
 			isa = PBXGroup;
 			children = (
 				6E6E39CB2C3EE50100FFAEDB /* SLottoView.swift */,
-				6E6E39CD2C3EE56A00FFAEDB /* SRecordView.swift */,
+				6E9F7BA92C49EE0B00FA691D /* SRecordView.swift */,
 			);
 			path = So0Views;
+			sourceTree = "<group>";
+		};
+		6E9F7BAB2C49F1EA00FA691D /* So0Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E9F7BAC2C49F22C00FA691D /* AudioRecorderFirebaseManager.swift */,
+				6E9F7BAE2C49F35B00FA691D /* AudioRecorderManager.swift */,
+			);
+			path = So0Models;
 			sourceTree = "<group>";
 		};
 		7702649D2C3ADA1200F8A065 /* SumchiveViews */ = {
@@ -243,6 +259,7 @@
 				6E3EEF9D2C47759400E82657 /* FirebaseAuth */,
 				6E3EEF9F2C47768100E82657 /* FirebaseDatabase */,
 				6E3EEFA12C47768100E82657 /* FirebaseDatabaseSwift */,
+				6E1B58122C48FEC900B6BA06 /* FirebaseStorage */,
 			);
 			productName = SwiftUIStudy;
 			productReference = 2C362FF62C2AD21D000FD762 /* SwiftUIStudy.app */;
@@ -337,7 +354,7 @@
 			files = (
 				2C3630012C2AD21E000FD762 /* Preview Assets.xcassets in Resources */,
 				2C362FFE2C2AD21E000FD762 /* Assets.xcassets in Resources */,
-				6E3EEF942C47719B00E82657 /* GoogleService-Info.plist in Resources */,
+				6E1B58112C48F68700B6BA06 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,12 +382,14 @@
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				77EBD2C22C3C07060036C093 /* SumchiveLottoView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
+				6E9F7BAA2C49EE0B00FA691D /* SRecordView.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
-				6E6E39CE2C3EE56A00FFAEDB /* SRecordView.swift in Sources */,
+				6E9F7BAD2C49F22C00FA691D /* AudioRecorderFirebaseManager.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
+				6E9F7BAF2C49F35B00FA691D /* AudioRecorderManager.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				6E6E39CC2C3EE50100FFAEDB /* SLottoView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
@@ -718,6 +737,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6E1B58122C48FEC900B6BA06 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E3EEF952C47733A00E82657 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		6E3EEF972C47742B00E82657 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E3EEF952C47733A00E82657 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
