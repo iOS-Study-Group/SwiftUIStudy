@@ -31,13 +31,17 @@ struct SoomVoiceRecordingView: View {
                     Spacer()
                         .frame(height: 100)
                     HStack(spacing: 10){
-                        Text("Previous")
-                            .frame(maxWidth: .infinity)
-                            .padding(30)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(.white.gradient)
-                            )
+                        Button{
+                            recorder.uploadAction()
+                        }label: {
+                            Text("Previous")
+                                .frame(maxWidth: .infinity)
+                                .padding(30)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(.white.gradient)
+                                )
+                        }
                         Text("New")
                             .frame(maxWidth: .infinity)
                             .padding(30)

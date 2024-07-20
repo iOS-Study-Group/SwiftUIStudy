@@ -29,6 +29,7 @@
 		2CC584732C4A3460005208C2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC584722C4A3460005208C2 /* FirebaseDatabase */; };
 		2CC584752C4A3465005208C2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2CC584742C4A3465005208C2 /* FirebaseFirestoreSwift */; };
 		2CCF619E2C3425B70091062C /* LottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF619D2C3425B70091062C /* LottoView.swift */; };
+		2CCF8B5C2C4B9EA00034EFE3 /* SoomStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF8B5B2C4B9EA00034EFE3 /* SoomStorageManager.swift */; };
 		2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34EF52C49FC6D0049F6A4 /* SumchiveLottoModel.swift */; };
 		2CF34EFD2C49FC6D0049F6A4 /* SumchiveRecorderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34EF62C49FC6D0049F6A4 /* SumchiveRecorderModel.swift */; };
 		2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34EF82C49FC6D0049F6A4 /* SumchiveLottoView.swift */; };
@@ -85,6 +86,7 @@
 		2CC584612C4A332B005208C2 /* AudioRecorderFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderFirebaseManager.swift; sourceTree = "<group>"; };
 		2CC584622C4A332B005208C2 /* AudioRecorderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
 		2CCF619D2C3425B70091062C /* LottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoView.swift; sourceTree = "<group>"; };
+		2CCF8B5B2C4B9EA00034EFE3 /* SoomStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomStorageManager.swift; sourceTree = "<group>"; };
 		2CF34EF52C49FC6D0049F6A4 /* SumchiveLottoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumchiveLottoModel.swift; sourceTree = "<group>"; };
 		2CF34EF62C49FC6D0049F6A4 /* SumchiveRecorderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumchiveRecorderModel.swift; sourceTree = "<group>"; };
 		2CF34EF82C49FC6D0049F6A4 /* SumchiveLottoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumchiveLottoView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				2CF34F042C4A25950049F6A4 /* Recorder.swift */,
 				2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */,
 				2CCF619D2C3425B70091062C /* LottoView.swift */,
+				2CCF8B5B2C4B9EA00034EFE3 /* SoomStorageManager.swift */,
 			);
 			path = SoomViews;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
+				2CCF8B5C2C4B9EA00034EFE3 /* SoomStorageManager.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,

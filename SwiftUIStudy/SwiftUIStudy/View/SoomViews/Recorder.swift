@@ -15,6 +15,7 @@ class Recorder: NSObject{
     private var audioRecorder: AVAudioRecorder?
     
     let filename: URL
+    let fileManager = StorageManager()
     
     override init(){
         // 마이크 권한 요청
@@ -31,6 +32,9 @@ class Recorder: NSObject{
         let documentUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         filename = documentUrl.appendingPathComponent("SoomAudioFile.m4a")
         print(filename)
+    }
+    func uploadAction(){
+        fileManager.upload(fileUrl: filename)
     }
     
     func startRecording(isRecord: Bool) {
@@ -72,10 +76,11 @@ class Recorder: NSObject{
     
    
     // 녹음을 파일을 저장하기 위한 디렉토리 생성, 파일 생성
-    func createAudioFolder()-> URL{
+    static func createAudioFolder()-> URL{
         let fileManager = FileManager.default
         // urls를 사용해서 요청하는 도메인에서 지정된 디렉토리에 대한 url를 가지고 올 수 있다.
         let documentUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        print(documentUrl.pathComponents)
         let directoryPathUrl = documentUrl.appendingPathComponent("SoomAudioFileFolder")
         let directoryPathString = directoryPathUrl.path()
         do{
