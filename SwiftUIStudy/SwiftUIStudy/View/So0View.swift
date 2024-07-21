@@ -80,6 +80,18 @@ struct So0View: View {
                                 }
                                 .buttonStyle(.borderedProminent)
                                 .tint(.white)
+                                NavigationLink {
+                                    SRecordView()
+                                } label: {
+                                    VStack {
+                                        Text("3주차")
+                                            .frame(maxWidth: .infinity)
+                                        Text("음성 메모 만들기")
+                                            .font(.system(size: 12))
+                                    }
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(.white)
                             }
                         }
                         .bold()
