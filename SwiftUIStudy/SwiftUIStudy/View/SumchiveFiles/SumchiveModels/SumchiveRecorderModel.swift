@@ -1,4 +1,5 @@
 import AVFoundation
+import FirebaseStorage
 
 class VoiceRecorder: NSObject, ObservableObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
@@ -20,7 +21,6 @@ class VoiceRecorder: NSObject, ObservableObject, AVAudioRecorderDelegate, AVAudi
             try audioSession.setCategory(.playAndRecord, mode: .default)
             try audioSession.setActive(true)
             
-            //어렵..
             let settings = [
                 AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
                 AVSampleRateKey: 12000,
@@ -42,9 +42,12 @@ class VoiceRecorder: NSObject, ObservableObject, AVAudioRecorderDelegate, AVAudi
         }
     }
     
-    //[녹음 - 종료] 기능
+    //[녹음 - 종료] 기능 & 파이어베이스 업로드
     func stopRecord() {
         recorder?.stop()
+        if let url = recorder?.url {
+            uploadToFirebase(url: url)
+        }
         recorder = nil
     }
     
@@ -78,7 +81,7 @@ class VoiceRecorder: NSObject, ObservableObject, AVAudioRecorderDelegate, AVAudi
     //paths : 반환된 URL 목록
     //paths[0] : 목록 안에 문서 디렉터리 하나 반환
     
-    //[녹음파일 - 삭제] 기능
+    //[녹음파일 - 삭제] 기능 & 파이어베이스 삭제
     func deleteFile(url: URL) {
         let file = FileManager.default
         
@@ -87,9 +90,42 @@ class VoiceRecorder: NSObject, ObservableObject, AVAudioRecorderDelegate, AVAudi
             if let index = recordFiles.firstIndex(of: url) {
                 recordFiles.remove(at: index)
             }
+            deleteFromFirebase(url: url)
         } catch {
             print("!ERROR!")
         }
     }
+    
+    // 파이어베이스에 파일 업로드
+    func uploadToFirebase(url: URL) {
+        let storage = Storage.storage()
+        let storageReference = storage.reference()
+
+        let fileReference = storageReference.child("Sumchive/\(url.lastPathComponent)")
+        
+        let _ = fileReference.putFile(from: url, metadata: nil) { metadata, error in
+            if let error = error {
+                print("!ERROR! : \(error.localizedDescription)")
+            } else {
+                print("Upload success")
+            }
+        }
+    }
+    
+    //파이어베이스의 파일 삭제
+    func deleteFromFirebase(url: URL) {
+            let storage = Storage.storage()
+            let storageReference = storage.reference()
+
+            let fileReference = storageReference.child("Sumchive/\(url.lastPathComponent)")
+            
+            fileReference.delete { error in
+                if let error = error {
+                    print("!ERROR! : \(error.localizedDescription)")
+                } else {
+                    print("Delete success")
+                }
+            }
+        }
 }
 
