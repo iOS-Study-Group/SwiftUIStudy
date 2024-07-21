@@ -125,6 +125,7 @@ struct RecordListView: View {
                     HStack{
                         //녹음파일명
                         Text(file.lastPathComponent)
+                            .foregroundColor(isPlaying && recordFile == file ? .red : .primary)
                         Divider()
                         //녹음 파일 재생 / 종료 버튼
                         Button(action: {
