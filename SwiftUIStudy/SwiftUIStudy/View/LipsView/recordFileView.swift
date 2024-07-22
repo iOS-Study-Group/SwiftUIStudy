@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct recordFileView: View {
-
+    
     @StateObject var recorder = AudioRecorder()
-  
+    
     var body: some View {
         VStack {
-   
+            
             List(recorder.recordedFiles, id: \.self) { url in
                 HStack{
                     Text(url.lastPathComponent)
@@ -26,19 +26,19 @@ struct recordFileView: View {
                     .buttonStyle(PlainButtonStyle())
                     .padding(.trailing, 10)
                     Divider()
-                   
+                    
                     Button {
-//                        recorder.removeFile(url: url)
+                        recorder.removeFile(fileURL: url)
                     } label: {
                         Text("삭제")
                         
                     }.buttonStyle(PlainButtonStyle())
-
+                    
                 }
             }
-                .onAppear {
-                    recorder.loadRecordedFiles()
-                }
+            .onAppear {
+                recorder.loadRecordedFiles()
+            }
             
         }
     }
