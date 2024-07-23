@@ -24,6 +24,11 @@
 
 ![3주차음성메모](https://github.com/user-attachments/assets/9ee9cc25-8c87-4c77-be28-5faa6254ea25)
 
+## 4주차 음성 메모 업로드
+<img width="651" alt="스크린샷 2024-07-23 오후 3 58 22" src="https://github.com/user-attachments/assets/abec41ca-6183-4067-96d5-5a0bf15af88f">
+
+
+
 
 ## Commit 규칙
 > 커밋 제목은 최대 50자 입력 </br>
