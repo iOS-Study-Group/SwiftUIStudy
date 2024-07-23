@@ -19,6 +19,10 @@
 ## 2주차 로또
 <img width="651" alt="스크린샷 2024-07-13 오전 2 37 05" src="https://github.com/user-attachments/assets/1dc606d3-32e2-4f1b-8aa8-63f2cfa86129">
 
+## 3주차 음성 메모
+<img width="651" alt="스크린샷 2024-07-20 오후 4 11 14" src="https://github.com/user-attachments/assets/c9cc522a-d989-4da8-8f1f-b900f7009b68">
+
+![3주차음성메모](https://github.com/user-attachments/assets/9ee9cc25-8c87-4c77-be28-5faa6254ea25)
 
 
 ## Commit 규칙

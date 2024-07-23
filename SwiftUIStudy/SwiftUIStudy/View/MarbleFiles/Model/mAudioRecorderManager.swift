@@ -7,6 +7,8 @@
 
 import Foundation
 import AVFoundation
+import FirebaseCore
+import FirebaseStorage
 
 class mAudioRecorderManager : NSObject, ObservableObject, AVAudioPlayerDelegate {
     var audioRecorder : AVAudioRecorder!
@@ -16,6 +18,7 @@ class mAudioRecorderManager : NSObject, ObservableObject, AVAudioPlayerDelegate 
     var audioPlayer: AVAudioPlayer?
     @Published var isPlaying = false
     @Published var isPaused = false
+    let storage = Storage.storage()
     
     /// 음성메모된 데이터
     @Published var recordedFiles = [URL]()
@@ -42,6 +45,28 @@ class mAudioRecorderManager : NSObject, ObservableObject, AVAudioPlayerDelegate 
         audioRecorder?.stop()
         self.recordedFiles.append(self.audioRecorder!.url)
         self.isRecording = false
+        uploadRecordFile(self.audioRecorder!.url)
+    }
+    
+    func uploadRecordFile(_ file : URL) {
+        // gs://voiceproject-47036.appspot.com/marble/ 경로에 recording-\(Date().timeIntervalSince1970).m4a 파일로 저장됨
+        let storageRef : StorageReference = self.storage.reference(forURL: "gs://voiceproject-47036.appspot.com/marble/recording-\(Date().timeIntervalSince1970).m4a")
+        
+        let uploadTask = storageRef.putFile(from: file, metadata: nil) { metadata, error in
+          guard let metadata = metadata else {
+            // Uh-oh, an error occurred!
+            return
+          }
+          // Metadata contains file metadata such as size, content-type.
+          let size = metadata.size
+          // You can also access to download URL after upload.
+            storageRef.downloadURL { (url, error) in
+            guard let downloadURL = url else {
+              // Uh-oh, an error occurred!
+              return
+            }
+          }
+        }
     }
     
     private func getDocumentsDirectory() -> URL {
