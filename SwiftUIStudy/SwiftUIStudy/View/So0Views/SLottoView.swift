@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-//
-//enum Grades: String {
-//    case firstGrade = "1등"
-//    case secondGrade = "2등"
-//    case thirdGrade = "3등"
-//    case forthGrade = "4등"
-//    case fifthGrade = "5등"
-//    case lose = "낙첨"
-//}
+
+enum Grades: String {
+    case firstGrade = "1등"
+    case secondGrade = "2등"
+    case thirdGrade = "3등"
+    case forthGrade = "4등"
+    case fifthGrade = "5등"
+    case lose = "낙첨"
+}
 
 struct SLottoView:View {
     @State var numbersArray: [Int] = []
@@ -141,8 +141,6 @@ struct SLottoView:View {
             .padding()
             .buttonStyle(.borderedProminent)
         }
-        .navigationTitle("Lotto")
-        .navigationBarBackButtonHidden(true)
     }
     
     func makeColoredCircle(num: Int, _ isAuto: Bool = false) -> some View {
