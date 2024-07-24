@@ -42,8 +42,11 @@ class LinkDataManager: ObservableObject {
                             jsonData.download_url = download_url
                         }
                         
-                        linkData.jsonDatas.append(jsonData)
-                        linkData.isSuccess = true
+                        // UI 관련된건 메인에서 작업하도록 함
+                        DispatchQueue.main.asyncAndWait {
+                            self.linkData.jsonDatas.append(jsonData)
+                            self.linkData.isSuccess = true
+                        }
                     }
                 }
             } catch GettingError.urlError {

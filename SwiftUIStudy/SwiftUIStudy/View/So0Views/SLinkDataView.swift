@@ -15,6 +15,7 @@ struct SLinkDataView: View {
             .font(.title)
             .fontWeight(.light)
             .padding()
+        
         if linkDataManager.linkData.isSuccess {
             ScrollView() {
                 ForEach(linkDataManager.linkData.jsonDatas) {
