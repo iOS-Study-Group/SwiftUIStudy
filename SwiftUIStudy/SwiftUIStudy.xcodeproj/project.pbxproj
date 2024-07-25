@@ -30,6 +30,11 @@
 		2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F042C4A25950049F6A4 /* Recorder.swift */; };
 		2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */; };
 		2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */; };
+		77243EBA2C50BF5A007578B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EB92C50BF59007578B0 /* Model.swift */; };
+		77243EBC2C50BF72007578B0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBB2C50BF72007578B0 /* ViewModel.swift */; };
+		77243EBE2C50C024007578B0 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBD2C50C024007578B0 /* PhotoInfoView.swift */; };
+		77243EC02C50EE7A007578B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBF2C50EE7A007578B0 /* MainView.swift */; };
+		77243EC22C514DBA007578B0 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EC12C514DBA007578B0 /* WebView.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
 		77CC8AFE2C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
@@ -94,6 +99,11 @@
 		2CF34F042C4A25950049F6A4 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomVoiceRecordingView.swift; sourceTree = "<group>"; };
 		2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSystemImageButton.swift; sourceTree = "<group>"; };
+		77243EB92C50BF59007578B0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		77243EBB2C50BF72007578B0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		77243EBD2C50C024007578B0 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
+		77243EBF2C50EE7A007578B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		77243EC12C514DBA007578B0 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
 		77CC8AFA2C4D594A0022EA23 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,10 +280,23 @@
 		2CF34EFB2C49FC6D0049F6A4 /* SumchiveFiles */ = {
 			isa = PBXGroup;
 			children = (
+				77243E752C508CB7007578B0 /* SumchiveLinkDataMVVM */,
 				2CF34EF72C49FC6D0049F6A4 /* SumchiveModels */,
 				2CF34EFA2C49FC6D0049F6A4 /* SumchiveViews */,
 			);
 			path = SumchiveFiles;
+			sourceTree = "<group>";
+		};
+		77243E752C508CB7007578B0 /* SumchiveLinkDataMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				77243EB92C50BF59007578B0 /* Model.swift */,
+				77243EBB2C50BF72007578B0 /* ViewModel.swift */,
+				77243EBF2C50EE7A007578B0 /* MainView.swift */,
+				77243EBD2C50C024007578B0 /* PhotoInfoView.swift */,
+				77243EC12C514DBA007578B0 /* WebView.swift */,
+			);
+			path = SumchiveLinkDataMVVM;
 			sourceTree = "<group>";
 		};
 		F6D9B0482C3C054E002EBBB9 /* LipsView */ = {
@@ -462,8 +485,10 @@
 			files = (
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
+				77243EBC2C50BF72007578B0 /* ViewModel.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,
+				77243EC22C514DBA007578B0 /* WebView.swift in Sources */,
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
@@ -471,9 +496,11 @@
 				FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
 				F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */,
+				77243EBA2C50BF5A007578B0 /* Model.swift in Sources */,
 				2CF34EFD2C49FC6D0049F6A4 /* SumchiveRecorderModel.swift in Sources */,
 				F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */,
 				2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */,
+				77243EBE2C50C024007578B0 /* PhotoInfoView.swift in Sources */,
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */,
@@ -488,6 +515,7 @@
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
+				77243EC02C50EE7A007578B0 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
