@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ScData_ViewModel: ObservableObject {
+class ViewModel: ObservableObject {
 
     @Published var picsumPhotos: [PicsumPhoto] = []
     @Published var isLoading = false

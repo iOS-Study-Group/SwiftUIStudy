@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var viewModel = ScData_ViewModel()
+    @StateObject private var viewModel = ViewModel()
     
     let columns = [
         GridItem(.flexible()),
