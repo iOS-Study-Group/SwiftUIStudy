@@ -42,6 +42,15 @@
 		F63029852C4DDCFD00BA6A29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63029832C4DDCFD00BA6A29 /* GoogleService-Info.plist */; };
 		F63029862C4DDCFD00BA6A29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F63029832C4DDCFD00BA6A29 /* GoogleService-Info.plist */; };
 		F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD6452C3FCE58008399E4 /* SoundRecord.swift */; };
+		F6A1781E2C5401830007ED6A /* LipsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1781D2C5401830007ED6A /* LipsDataModel.swift */; };
+		F6A1781F2C5401830007ED6A /* LipsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1781D2C5401830007ED6A /* LipsDataModel.swift */; };
+		F6A178202C5401830007ED6A /* LipsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1781D2C5401830007ED6A /* LipsDataModel.swift */; };
+		F6A178272C5401AC0007ED6A /* LipsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A178262C5401AC0007ED6A /* LipsDataView.swift */; };
+		F6A178282C5401AC0007ED6A /* LipsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A178262C5401AC0007ED6A /* LipsDataView.swift */; };
+		F6A178292C5401AC0007ED6A /* LipsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A178262C5401AC0007ED6A /* LipsDataView.swift */; };
+		F6A1782C2C5407D10007ED6A /* LipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1782B2C5407D10007ED6A /* LipsViewModel.swift */; };
+		F6A1782D2C5407D10007ED6A /* LipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1782B2C5407D10007ED6A /* LipsViewModel.swift */; };
+		F6A1782E2C5407D10007ED6A /* LipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1782B2C5407D10007ED6A /* LipsViewModel.swift */; };
 		F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7CA6B2C410882009D0B69 /* recordFileView.swift */; };
 		F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */; };
 		F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F2F8372C44F43C007F83D7 /* ModalView.swift */; };
@@ -99,6 +108,9 @@
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
 		F63029832C4DDCFD00BA6A29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F65FD6452C3FCE58008399E4 /* SoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecord.swift; sourceTree = "<group>"; };
+		F6A1781D2C5401830007ED6A /* LipsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsDataModel.swift; sourceTree = "<group>"; };
+		F6A178262C5401AC0007ED6A /* LipsDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsDataView.swift; sourceTree = "<group>"; };
+		F6A1782B2C5407D10007ED6A /* LipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsViewModel.swift; sourceTree = "<group>"; };
 		F6B7CA6B2C410882009D0B69 /* recordFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordFileView.swift; sourceTree = "<group>"; };
 		F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsoundView.swift; sourceTree = "<group>"; };
 		F6F2F8372C44F43C007F83D7 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -288,9 +300,36 @@
 			path = SumchiveFiles;
 			sourceTree = "<group>";
 		};
+		F6A1781C2C54016A0007ED6A /* LipsModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6A1781D2C5401830007ED6A /* LipsDataModel.swift */,
+			);
+			path = LipsModel;
+			sourceTree = "<group>";
+		};
+		F6A1782A2C54070E0007ED6A /* LipsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6A1782B2C5407D10007ED6A /* LipsViewModel.swift */,
+			);
+			path = LipsViewModel;
+			sourceTree = "<group>";
+		};
+		F6A178352C5502040007ED6A /* lipsMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F6A178262C5401AC0007ED6A /* LipsDataView.swift */,
+				F6A1781C2C54016A0007ED6A /* LipsModel */,
+				F6A1782A2C54070E0007ED6A /* LipsViewModel */,
+			);
+			path = lipsMVVM;
+			sourceTree = "<group>";
+		};
 		F6D9B0482C3C054E002EBBB9 /* LipsView */ = {
 			isa = PBXGroup;
 			children = (
+				F6A178352C5502040007ED6A /* lipsMVVM */,
 				F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */,
 				F65FD6452C3FCE58008399E4 /* SoundRecord.swift */,
 				F6B7CA6B2C410882009D0B69 /* recordFileView.swift */,
@@ -470,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A178272C5401AC0007ED6A /* LipsDataView.swift in Sources */,
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
@@ -487,6 +527,8 @@
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */,
+				F6A1782C2C5407D10007ED6A /* LipsViewModel.swift in Sources */,
+				F6A1781E2C5401830007ED6A /* LipsDataModel.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
@@ -506,6 +548,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C36300B2C2AD21E000FD762 /* SwiftUIStudyTests.swift in Sources */,
+				F6A178282C5401AC0007ED6A /* LipsDataView.swift in Sources */,
+				F6A1782D2C5407D10007ED6A /* LipsViewModel.swift in Sources */,
+				F6A1781F2C5401830007ED6A /* LipsDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +558,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A178292C5401AC0007ED6A /* LipsDataView.swift in Sources */,
+				F6A1782E2C5407D10007ED6A /* LipsViewModel.swift in Sources */,
 				2C3630172C2AD21E000FD762 /* SwiftUIStudyUITestsLaunchTests.swift in Sources */,
+				F6A178202C5401830007ED6A /* LipsDataModel.swift in Sources */,
 				2C3630152C2AD21E000FD762 /* SwiftUIStudyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
