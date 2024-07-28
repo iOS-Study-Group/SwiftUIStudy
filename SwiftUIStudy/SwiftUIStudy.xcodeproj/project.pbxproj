@@ -18,6 +18,10 @@
 		2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630292C2AD326000FD762 /* ActIveView.swift */; };
 		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
+		2C5326192C5685340053A4E0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5326182C5685340053A4E0 /* CardView.swift */; };
+		2CA81F3F2C50034D008B03A7 /* SoomPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA81F3E2C50034D008B03A7 /* SoomPhotoModel.swift */; };
+		2CA81F412C500363008B03A7 /* SoomPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA81F402C500363008B03A7 /* SoomPhotosView.swift */; };
+		2CA81F432C500374008B03A7 /* SoomPhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA81F422C500374008B03A7 /* SoomPhotosViewModel.swift */; };
 		2CBE047F2C4A612A0086CA05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CBE047E2C4A612A0086CA05 /* GoogleService-Info.plist */; };
 		2CBE04802C4A612A0086CA05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CBE047E2C4A612A0086CA05 /* GoogleService-Info.plist */; };
 		2CBE04812C4A612A0086CA05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CBE047E2C4A612A0086CA05 /* GoogleService-Info.plist */; };
@@ -72,13 +76,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C362FF62C2AD21D000FD762 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftUIStudy.app; path = "/Users/sueunkim/Desktop/SwiftUIStudy/SwiftUIStudy/build/Debug-iphoneos/SwiftUIStudy.app"; sourceTree = "<absolute>"; };
 		2C362FF92C2AD21D000FD762 /* SwiftUIStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStudyApp.swift; sourceTree = "<group>"; };
 		2C362FFD2C2AD21E000FD762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3630002C2AD21E000FD762 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C3630062C2AD21E000FD762 /* SwiftUIStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftUIStudyTests.xctest; path = "/Users/sueunkim/Desktop/SwiftUIStudy/SwiftUIStudy/build/Debug-iphoneos/SwiftUIStudy.app/PlugIns/SwiftUIStudyTests.xctest"; sourceTree = "<absolute>"; };
 		2C36300A2C2AD21E000FD762 /* SwiftUIStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStudyTests.swift; sourceTree = "<group>"; };
-		2C3630102C2AD21E000FD762 /* SwiftUIStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftUIStudyUITests.xctest; path = "/Users/sueunkim/Desktop/SwiftUIStudy/SwiftUIStudy/build/Debug-iphoneos/SwiftUIStudyUITests-Runner.app/PlugIns/SwiftUIStudyUITests.xctest"; sourceTree = "<absolute>"; };
 		2C3630142C2AD21E000FD762 /* SwiftUIStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStudyUITests.swift; sourceTree = "<group>"; };
 		2C3630162C2AD21E000FD762 /* SwiftUIStudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2C3630232C2AD2CA000FD762 /* SoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomView.swift; sourceTree = "<group>"; };
@@ -86,6 +87,13 @@
 		2C3630292C2AD326000FD762 /* ActIveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIveView.swift; sourceTree = "<group>"; };
 		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
+		2C5326182C5685340053A4E0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2CA81F3B2C4FF827008B03A7 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA81F3C2C4FF827008B03A7 /* SwiftUIStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA81F3D2C4FF827008B03A7 /* SwiftUIStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA81F3E2C50034D008B03A7 /* SoomPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomPhotoModel.swift; sourceTree = "<group>"; };
+		2CA81F402C500363008B03A7 /* SoomPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomPhotosView.swift; sourceTree = "<group>"; };
+		2CA81F422C500374008B03A7 /* SoomPhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomPhotosViewModel.swift; sourceTree = "<group>"; };
 		2CBE047E2C4A612A0086CA05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CC5845E2C4A332B005208C2 /* SLottoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLottoView.swift; sourceTree = "<group>"; };
 		2CC5845F2C4A332B005208C2 /* SRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRecordView.swift; sourceTree = "<group>"; };
@@ -148,11 +156,9 @@
 		2C1376162C382C4100CE1BC9 /* SoomViews */ = {
 			isa = PBXGroup;
 			children = (
-				2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */,
-				2CF34F042C4A25950049F6A4 /* Recorder.swift */,
-				2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */,
-				2CCF619D2C3425B70091062C /* LottoView.swift */,
-				2CCF8B5B2C4B9EA00034EFE3 /* SoomStorageManager.swift */,
+				2C4D93462C52B46400A4B6C7 /* View */,
+				2C4D93452C52B45200A4B6C7 /* Model */,
+				2C4D93442C52B44200A4B6C7 /* ViewModel */,
 			);
 			path = SoomViews;
 			sourceTree = "<group>";
@@ -163,6 +169,9 @@
 				2C362FF82C2AD21D000FD762 /* SwiftUIStudy */,
 				2C3630092C2AD21E000FD762 /* SwiftUIStudyTests */,
 				2C3630132C2AD21E000FD762 /* SwiftUIStudyUITests */,
+				2CA81F3B2C4FF827008B03A7 /* SwiftUIStudy.app */,
+				2CA81F3C2C4FF827008B03A7 /* SwiftUIStudyTests.xctest */,
+				2CA81F3D2C4FF827008B03A7 /* SwiftUIStudyUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,6 +238,36 @@
 				7738FB0B2C2BD156002A8104 /* MainTabView.swift */,
 			);
 			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		2C4D93442C52B44200A4B6C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2CA81F422C500374008B03A7 /* SoomPhotosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C4D93452C52B45200A4B6C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CA81F3E2C50034D008B03A7 /* SoomPhotoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C4D93462C52B46400A4B6C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */,
+				2CF34F042C4A25950049F6A4 /* Recorder.swift */,
+				2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */,
+				2CCF619D2C3425B70091062C /* LottoView.swift */,
+				2CCF8B5B2C4B9EA00034EFE3 /* SoomStorageManager.swift */,
+				2CA81F402C500363008B03A7 /* SoomPhotosView.swift */,
+				2C5326182C5685340053A4E0 /* CardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2CC584602C4A332B005208C2 /* So0Views */ = {
@@ -341,7 +380,7 @@
 				FB83B4E82C4A5370004070B1 /* FirebaseStorage */,
 			);
 			productName = SwiftUIStudy;
-			productReference = 2C362FF62C2AD21D000FD762 /* SwiftUIStudy.app */;
+			productReference = 2CA81F3B2C4FF827008B03A7 /* SwiftUIStudy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2C3630052C2AD21E000FD762 /* SwiftUIStudyTests */ = {
@@ -359,7 +398,7 @@
 			);
 			name = SwiftUIStudyTests;
 			productName = SwiftUIStudyTests;
-			productReference = 2C3630062C2AD21E000FD762 /* SwiftUIStudyTests.xctest */;
+			productReference = 2CA81F3C2C4FF827008B03A7 /* SwiftUIStudyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2C36300F2C2AD21E000FD762 /* SwiftUIStudyUITests */ = {
@@ -377,7 +416,7 @@
 			);
 			name = SwiftUIStudyUITests;
 			productName = SwiftUIStudyUITests;
-			productReference = 2C3630102C2AD21E000FD762 /* SwiftUIStudyUITests.xctest */;
+			productReference = 2CA81F3D2C4FF827008B03A7 /* SwiftUIStudyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -464,7 +503,9 @@
 				2CCF8B5C2C4B9EA00034EFE3 /* SoomStorageManager.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
+				2CA81F3F2C50034D008B03A7 /* SoomPhotoModel.swift in Sources */,
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,
+				2CA81F412C500363008B03A7 /* SoomPhotosView.swift in Sources */,
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
@@ -485,9 +526,11 @@
 				2CC584662C4A332B005208C2 /* AudioRecorderFirebaseManager.swift in Sources */,
 				2CF34EFF2C49FC6D0049F6A4 /* SumchiveRecorderView.swift in Sources */,
 				2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */,
+				2CA81F432C500374008B03A7 /* SoomPhotosViewModel.swift in Sources */,
 				2CC584672C4A332B005208C2 /* AudioRecorderManager.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
+				2C5326192C5685340053A4E0 /* CardView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

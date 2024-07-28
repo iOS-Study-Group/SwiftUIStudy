@@ -42,7 +42,7 @@ struct SoomView: View {
                     )
                     Spacer()
                     NavigationLink{
-                        SoomVoiceRecordingView()
+                        SoomPhotosView()
                     }label: {
                         Text("다음")
                             .frame(maxWidth:.infinity)
