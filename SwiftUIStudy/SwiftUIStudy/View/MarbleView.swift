@@ -30,6 +30,11 @@ struct MarbleView: View {
                     } label: {
                         listLabel("24.07.09", "음성 앱")
                     }
+                    NavigationLink {
+                        mFetchDataView()
+                    } label: {
+                        listLabel("24.07.24", "데이터 가져오기 앱")
+                    }
                 }
                 .listStyle(.plain)
             }

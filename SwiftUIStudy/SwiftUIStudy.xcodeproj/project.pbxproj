@@ -51,6 +51,10 @@
 		FB83B4E52C4A5370004070B1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FB83B4E42C4A5370004070B1 /* FirebaseFirestore */; };
 		FB83B4E72C4A5370004070B1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB83B4E62C4A5370004070B1 /* FirebaseFirestoreSwift */; };
 		FB83B4E92C4A5370004070B1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FB83B4E82C4A5370004070B1 /* FirebaseStorage */; };
+		FB83B4F12C5086B7004070B1 /* mFetchDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B4F02C5086B7004070B1 /* mFetchDataView.swift */; };
+		FB83B4F32C5086E7004070B1 /* mFetchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B4F22C5086E7004070B1 /* mFetchDataManager.swift */; };
+		FB83B4F62C508729004070B1 /* mFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B4F52C508729004070B1 /* mFetchData.swift */; };
+		FB83B5F92C56BC2B004070B1 /* mFetchDataDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B5F82C56BC2B004070B1 /* mFetchDataDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,10 @@
 		FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mLottoView.swift; sourceTree = "<group>"; };
 		FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mVoiceView.swift; sourceTree = "<group>"; };
 		FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAudioRecorderManager.swift; sourceTree = "<group>"; };
+		FB83B4F02C5086B7004070B1 /* mFetchDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchDataView.swift; sourceTree = "<group>"; };
+		FB83B4F22C5086E7004070B1 /* mFetchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchDataManager.swift; sourceTree = "<group>"; };
+		FB83B4F52C508729004070B1 /* mFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchData.swift; sourceTree = "<group>"; };
+		FB83B5F82C56BC2B004070B1 /* mFetchDataDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchDataDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				FB56F7392C3CBA09002D24C1 /* mCalcView.swift */,
+				FB83B4F02C5086B7004070B1 /* mFetchDataView.swift */,
+				FB83B5F82C56BC2B004070B1 /* mFetchDataDetailView.swift */,
 				FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */,
 				FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */,
 			);
@@ -300,16 +310,26 @@
 		FB56F73F2C3CC533002D24C1 /* MarbleFiles */ = {
 			isa = PBXGroup;
 			children = (
-				FB56F7402C3CC6C7002D24C1 /* Model */,
+				FB83B4F42C50870F004070B1 /* Model */,
+				FB56F7402C3CC6C7002D24C1 /* ViewModel */,
 				FB56F7382C3CB9F4002D24C1 /* View */,
 			);
 			path = MarbleFiles;
 			sourceTree = "<group>";
 		};
-		FB56F7402C3CC6C7002D24C1 /* Model */ = {
+		FB56F7402C3CC6C7002D24C1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */,
+				FB83B4F22C5086E7004070B1 /* mFetchDataManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FB83B4F42C50870F004070B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB83B4F52C508729004070B1 /* mFetchData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -466,17 +486,21 @@
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
+				FB83B4F12C5086B7004070B1 /* mFetchDataView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
 				F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */,
 				FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */,
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
+				FB83B4F62C508729004070B1 /* mFetchData.swift in Sources */,
 				F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */,
 				2CF34EFD2C49FC6D0049F6A4 /* SumchiveRecorderModel.swift in Sources */,
 				F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */,
 				2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */,
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
+				FB83B4F32C5086E7004070B1 /* mFetchDataManager.swift in Sources */,
 				2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */,
+				FB83B5F92C56BC2B004070B1 /* mFetchDataDetailView.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
