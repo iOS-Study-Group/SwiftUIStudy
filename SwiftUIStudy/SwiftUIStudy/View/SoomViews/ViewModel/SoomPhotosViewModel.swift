@@ -14,14 +14,6 @@ class SoomPhotosViewModel{
     var photos: [SoomPhotoModel] = []
     let urlString: String = "https://picsum.photos/v2/list"
     let jsonDecoder = JSONDecoder()
-    var sortedData: [SoomPhotoModel] = []
-    //        get{
-    //            return photos.sorted{$0.id < $1.id}
-    //        }
-    //        set{
-    //            self.sortedData = newValue.sorted{$0.id < $1.id}
-    //        }
-    //    }
     
     init() {
         Task{
