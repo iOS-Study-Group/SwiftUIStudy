@@ -27,7 +27,9 @@ class LipsViewModel: ObservableObject {
                 let decoded = try JSONDecoder().decode([ImageData].self, from: data)
                 
                 //디코딩 된 이미지 목록을 images에 저장 
-                images = decoded
+                DispatchQueue.main.async {
+                               self.images = decoded
+                           }
                 
             } catch {
                 print("이미지 로드 에러: \(error.localizedDescription)")
