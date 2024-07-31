@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SoomCustomTextField: View {
-    let idColor = LinearGradient(colors: [.red, .green, .blue], startPoint: .leading, endPoint: .trailing)
+    let textFieldColor = LinearGradient(colors: [.red, .green, .blue], startPoint: .leading, endPoint: .trailing)
     let labelText: String
     let isSecure: Bool
     @Binding var text: String
@@ -21,7 +21,7 @@ struct SoomCustomTextField: View {
                     .padding(.horizontal, 16)
                 SecureField("",
                           text: $text,
-                          prompt: Text("아이디를 입력해주세요")
+                          prompt: Text("비밀번호를 입력해주세요")
                     .font(.headline)
                 )
                 .frame(maxWidth: .infinity)
@@ -30,7 +30,7 @@ struct SoomCustomTextField: View {
                 .background(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke()
-                        .foregroundStyle(idColor)
+                        .foregroundStyle(textFieldColor)
                 )
                 .padding(.horizontal,20)
             }else{
@@ -48,7 +48,7 @@ struct SoomCustomTextField: View {
                 .background(
                     RoundedRectangle(cornerRadius: 8)
                         .stroke()
-                        .foregroundStyle(idColor)
+                        .foregroundStyle(textFieldColor)
                 )
                 .padding(.horizontal,20)
             }
