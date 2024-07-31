@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//test
 class LipsViewModel: ObservableObject {
     @Published var images: [ImageData] = [] // 이미지 목록 저장하는 프로퍼티
     
