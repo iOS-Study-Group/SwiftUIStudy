@@ -25,6 +25,7 @@
 		2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630292C2AD326000FD762 /* ActIveView.swift */; };
 		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
+		2CC49FD22C5A7B7F0013C387 /* SoomLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC49FD12C5A7B7F0013C387 /* SoomLoginViewModel.swift */; };
 		2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5845E2C4A332B005208C2 /* SLottoView.swift */; };
 		2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5845F2C4A332B005208C2 /* SRecordView.swift */; };
 		2CC584662C4A332B005208C2 /* AudioRecorderFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC584612C4A332B005208C2 /* AudioRecorderFirebaseManager.swift */; };
@@ -96,6 +97,7 @@
 		2C3630292C2AD326000FD762 /* ActIveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIveView.swift; sourceTree = "<group>"; };
 		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
+		2CC49FD12C5A7B7F0013C387 /* SoomLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomLoginViewModel.swift; sourceTree = "<group>"; };
 		2CC5845E2C4A332B005208C2 /* SLottoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLottoView.swift; sourceTree = "<group>"; };
 		2CC5845F2C4A332B005208C2 /* SRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRecordView.swift; sourceTree = "<group>"; };
 		2CC584612C4A332B005208C2 /* AudioRecorderFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderFirebaseManager.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		2C31203A2C594B80005F5BEE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CC49FD12C5A7B7F0013C387 /* SoomLoginViewModel.swift */,
 				2C3120372C594B5D005F5BEE /* SoomPhotoViewModel.swift */,
 			);
 			path = ViewModel;
@@ -519,6 +522,7 @@
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */,
+				2CC49FD22C5A7B7F0013C387 /* SoomLoginViewModel.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,

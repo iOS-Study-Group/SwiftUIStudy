@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SoomCustomTextField: View {
-    let textFieldColor = LinearGradient(colors: [.red, .green, .blue], startPoint: .leading, endPoint: .trailing)
+    let textFieldColor = LinearGradient(colors: [.orange, .orange.opacity(0.5)], startPoint: .leading, endPoint: .trailing)
     let labelText: String
     let isSecure: Bool
     @Binding var text: String
@@ -18,39 +18,37 @@ struct SoomCustomTextField: View {
             if isSecure{
                 Text(labelText)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 16)
                 SecureField("",
-                          text: $text,
-                          prompt: Text("비밀번호를 입력해주세요")
+                            text: $text,
+                            prompt: Text("비밀번호를 입력해주세요")
                     .font(.headline)
+                    .foregroundStyle(.black.opacity(0.7))
                 )
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .padding(.horizontal,20)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke()
-                        .foregroundStyle(textFieldColor)
+                        .stroke(textFieldColor,lineWidth: 1.5)
+                        .fill(.white.opacity(0.5))
                 )
-                .padding(.horizontal,20)
             }else{
                 Text(labelText)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 16)
                 TextField("",
                           text: $text,
-                          prompt: Text("아이디를 입력해주세요")
+                          prompt: Text("Email 형식을 입력해주세요")
                     .font(.headline)
+                    .foregroundStyle(.black.opacity(0.7))
                 )
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
                 .padding(.horizontal,20)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke()
-                        .foregroundStyle(textFieldColor)
+                        .stroke(textFieldColor,lineWidth: 1.5)
+                        .fill(.white.opacity(0.5))
                 )
-                .padding(.horizontal,20)
             }
         }
     }
