@@ -125,18 +125,6 @@ struct SumchiveView: View {
                                         }
                                         .buttonStyle(.borderedProminent)
                                         .tint(.white.opacity(0.5))
-                                        NavigationLink {
-                                            MainView()
-                                        } label: {
-                                                Text("Photo Gallery")
-                                                    .frame(maxWidth: .infinity)
-                                                    .font(.system(size: 20))
-                                                Spacer()
-                                                Image(systemName: "chevron.right")
-                                                    .foregroundColor(.indigo)
-                                        }
-                                        .buttonStyle(.borderedProminent)
-                                        .tint(.white.opacity(0.5))
                                     }
                                 }
                                 .foregroundStyle(.indigo)
