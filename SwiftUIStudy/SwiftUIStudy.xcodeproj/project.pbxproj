@@ -39,8 +39,12 @@
 		F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */; };
 		F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */; };
 		F6AC7A052C5A947300EEB6DC /* LipsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC7A012C5A947300EEB6DC /* LipsDataView.swift */; };
+		F6AC7A0A2C5A9D5700EEB6DC /* LipsLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC7A092C5A9D5700EEB6DC /* LipsLoginView.swift */; };
+		F6ADBF6C2C5CA44C0077C2C3 /* UnderlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADBF6B2C5CA44C0077C2C3 /* UnderlineView.swift */; };
+		F6ADBF702C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ADBF6F2C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift */; };
 		F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7CA6B2C410882009D0B69 /* recordFileView.swift */; };
 		F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */; };
+		F6DB17982C5E8033009A5E4D /* LipsCreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB17972C5E8033009A5E4D /* LipsCreateAccountViewModel.swift */; };
 		F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F2F8372C44F43C007F83D7 /* ModalView.swift */; };
 		FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F7392C3CBA09002D24C1 /* mCalcView.swift */; };
 		FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */; };
@@ -107,8 +111,12 @@
 		F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsDataModel.swift; sourceTree = "<group>"; };
 		F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsViewModel.swift; sourceTree = "<group>"; };
 		F6AC7A012C5A947300EEB6DC /* LipsDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsDataView.swift; sourceTree = "<group>"; };
+		F6AC7A092C5A9D5700EEB6DC /* LipsLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsLoginView.swift; sourceTree = "<group>"; };
+		F6ADBF6B2C5CA44C0077C2C3 /* UnderlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineView.swift; sourceTree = "<group>"; };
+		F6ADBF6F2C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsCreateAccountVeiw.swift; sourceTree = "<group>"; };
 		F6B7CA6B2C410882009D0B69 /* recordFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordFileView.swift; sourceTree = "<group>"; };
 		F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsoundView.swift; sourceTree = "<group>"; };
+		F6DB17972C5E8033009A5E4D /* LipsCreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsCreateAccountViewModel.swift; sourceTree = "<group>"; };
 		F6F2F8372C44F43C007F83D7 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		FB56F7392C3CBA09002D24C1 /* mCalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mCalcView.swift; sourceTree = "<group>"; };
 		FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mLottoView.swift; sourceTree = "<group>"; };
@@ -308,9 +316,19 @@
 			path = lipsMVVM;
 			sourceTree = "<group>";
 		};
+		F6AC7A062C5A9D2600EEB6DC /* LipsLogin */ = {
+			isa = PBXGroup;
+			children = (
+				F6DB17962C5E7670009A5E4D /* LipsLogiViewModel */,
+				F6DB17952C5E7655009A5E4D /* LipsLoginView */,
+			);
+			path = LipsLogin;
+			sourceTree = "<group>";
+		};
 		F6D9B0482C3C054E002EBBB9 /* LipsView */ = {
 			isa = PBXGroup;
 			children = (
+				F6AC7A062C5A9D2600EEB6DC /* LipsLogin */,
 				F6AC7A022C5A947300EEB6DC /* lipsMVVM */,
 				F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */,
 				F65FD6452C3FCE58008399E4 /* SoundRecord.swift */,
@@ -318,6 +336,24 @@
 				F6F2F8372C44F43C007F83D7 /* ModalView.swift */,
 			);
 			path = LipsView;
+			sourceTree = "<group>";
+		};
+		F6DB17952C5E7655009A5E4D /* LipsLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				F6AC7A092C5A9D5700EEB6DC /* LipsLoginView.swift */,
+				F6ADBF6B2C5CA44C0077C2C3 /* UnderlineView.swift */,
+				F6ADBF6F2C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift */,
+			);
+			path = LipsLoginView;
+			sourceTree = "<group>";
+		};
+		F6DB17962C5E7670009A5E4D /* LipsLogiViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6DB17972C5E8033009A5E4D /* LipsCreateAccountViewModel.swift */,
+			);
+			path = LipsLogiViewModel;
 			sourceTree = "<group>";
 		};
 		FB56F7382C3CB9F4002D24C1 /* View */ = {
@@ -497,6 +533,7 @@
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
+				F6ADBF702C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift in Sources */,
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
@@ -516,9 +553,12 @@
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
+				F6ADBF6C2C5CA44C0077C2C3 /* UnderlineView.swift in Sources */,
 				FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */,
 				2CC584662C4A332B005208C2 /* AudioRecorderFirebaseManager.swift in Sources */,
+				F6DB17982C5E8033009A5E4D /* LipsCreateAccountViewModel.swift in Sources */,
 				2CF34EFF2C49FC6D0049F6A4 /* SumchiveRecorderView.swift in Sources */,
+				F6AC7A0A2C5A9D5700EEB6DC /* LipsLoginView.swift in Sources */,
 				2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */,
 				2CC584672C4A332B005208C2 /* AudioRecorderManager.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
