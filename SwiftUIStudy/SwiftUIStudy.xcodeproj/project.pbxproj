@@ -48,6 +48,9 @@
 		77CC8AFF2C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
 		77CC8B002C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
 		F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD6452C3FCE58008399E4 /* SoundRecord.swift */; };
+		F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */; };
+		F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */; };
+		F6AC7A052C5A947300EEB6DC /* LipsDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC7A012C5A947300EEB6DC /* LipsDataView.swift */; };
 		F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7CA6B2C410882009D0B69 /* recordFileView.swift */; };
 		F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */; };
 		F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F2F8372C44F43C007F83D7 /* ModalView.swift */; };
@@ -129,6 +132,9 @@
 		77CC8AFC2C4D594A0022EA23 /* SwiftUIStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F65FD6452C3FCE58008399E4 /* SoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecord.swift; sourceTree = "<group>"; };
+		F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsDataModel.swift; sourceTree = "<group>"; };
+		F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsViewModel.swift; sourceTree = "<group>"; };
+		F6AC7A012C5A947300EEB6DC /* LipsDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsDataView.swift; sourceTree = "<group>"; };
 		F6B7CA6B2C410882009D0B69 /* recordFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordFileView.swift; sourceTree = "<group>"; };
 		F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsoundView.swift; sourceTree = "<group>"; };
 		F6F2F8372C44F43C007F83D7 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -344,9 +350,36 @@
 			path = SumchiveLinkDataMVVM;
 			sourceTree = "<group>";
 		};
+		F6AC79FE2C5A947300EEB6DC /* LipsModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */,
+			);
+			path = LipsModel;
+			sourceTree = "<group>";
+		};
+		F6AC7A002C5A947300EEB6DC /* LipsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */,
+			);
+			path = LipsViewModel;
+			sourceTree = "<group>";
+		};
+		F6AC7A022C5A947300EEB6DC /* lipsMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F6AC79FE2C5A947300EEB6DC /* LipsModel */,
+				F6AC7A002C5A947300EEB6DC /* LipsViewModel */,
+				F6AC7A012C5A947300EEB6DC /* LipsDataView.swift */,
+			);
+			path = lipsMVVM;
+			sourceTree = "<group>";
+		};
 		F6D9B0482C3C054E002EBBB9 /* LipsView */ = {
 			isa = PBXGroup;
 			children = (
+				F6AC7A022C5A947300EEB6DC /* lipsMVVM */,
 				F6D9B0492C3C0778002EBBB9 /* LipsoundView.swift */,
 				F65FD6452C3FCE58008399E4 /* SoundRecord.swift */,
 				F6B7CA6B2C410882009D0B69 /* recordFileView.swift */,
@@ -541,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFD928D2C4FA9470077D9D3 /* LinkData.swift in Sources */,
+				F6AC7A052C5A947300EEB6DC /* LipsDataView.swift in Sources */,
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
 				77243EBC2C50BF72007578B0 /* ViewModel.swift in Sources */,
@@ -552,6 +586,7 @@
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				2C3120382C594B5D005F5BEE /* SoomPhotoViewModel.swift in Sources */,
 				FB83B4F12C5086B7004070B1 /* mFetchDataView.swift in Sources */,
+				F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
 				F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */,
 				6EFD92892C4FA15A0077D9D3 /* SLinkDataView.swift in Sources */,
@@ -570,6 +605,7 @@
 				FB83B4F32C5086E7004070B1 /* mFetchDataManager.swift in Sources */,
 				2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */,
 				FB83B5F92C56BC2B004070B1 /* mFetchDataDetailView.swift in Sources */,
+				F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
