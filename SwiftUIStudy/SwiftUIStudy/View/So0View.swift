@@ -93,6 +93,19 @@ struct So0View: View {
                                 }
                                 .buttonStyle(.borderedProminent)
                                 .tint(.white)
+                                
+                                NavigationLink {
+                                    SLinkDataView()
+                                } label: {
+                                    VStack {
+                                        Text("4주차")
+                                            .frame(maxWidth: .infinity)
+                                        Text("외부 서버 데이터 가져오기")
+                                            .font(.system(size: 12))
+                                    }
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(.white)
                             }
                         }
                         .bold()
