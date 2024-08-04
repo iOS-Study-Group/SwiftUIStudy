@@ -14,7 +14,6 @@ enum fetchError : Error {
 
 class mFetchDataManager : ObservableObject {
     @Published var datas : [mFetchData] = []
-    @Published var printCon : Any?
     let urlAddress : String = "https://picsum.photos/v2/list"
     
     func fetchData() {

@@ -35,6 +35,11 @@ struct MarbleView: View {
                     } label: {
                         listLabel("24.07.24", "데이터 가져오기 앱")
                     }
+                    NavigationLink {
+                        mFirebaseAuthView()
+                    } label: {
+                        listLabel("24.07.30", "Firebase 회원가입/로그인 앱")
+                    }
                 }
                 .listStyle(.plain)
             }
