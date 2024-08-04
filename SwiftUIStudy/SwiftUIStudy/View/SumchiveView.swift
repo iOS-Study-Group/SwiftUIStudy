@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SumchiveView: View {
     
-    let study = ["SwiftUI","UIKit","iOS","APP", "GIT/GITHUB"]
+    let study = ["SwiftUI"/*,"UIKit","iOS","APP", "GIT/GITHUB"*/]
     let member = ["Soom","So0","lips","Actlve", "Marble"]
     //study, member 배열 선언
     
@@ -116,7 +116,7 @@ struct SumchiveView: View {
                                         NavigationLink {
                                             SumchiveRecorderView()
                                         } label: {
-                                                Text("Recorder App")
+                                                Text("   Recorder App")
                                                     .frame(maxWidth: .infinity)
                                                     .font(.system(size: 20))
                                                 Spacer()
@@ -125,10 +125,24 @@ struct SumchiveView: View {
                                         }
                                         .buttonStyle(.borderedProminent)
                                         .tint(.white.opacity(0.5))
+                                        
                                         NavigationLink {
                                             MainView()
                                         } label: {
-                                                Text("Photo Gallery")
+                                                Text("   Photo Gallery")
+                                                    .frame(maxWidth: .infinity)
+                                                    .font(.system(size: 20))
+                                                Spacer()
+                                                Image(systemName: "chevron.right")
+                                                    .foregroundColor(.indigo)
+                                        }
+                                        .buttonStyle(.borderedProminent)
+                                        .tint(.white.opacity(0.5))
+                                        
+                                        NavigationLink {
+                                            SumchiveSignInView()
+                                        } label: {
+                                                Text("   Auth Login")
                                                     .frame(maxWidth: .infinity)
                                                     .font(.system(size: 20))
                                                 Spacer()
