@@ -37,11 +37,11 @@
 		6EFD92892C4FA15A0077D9D3 /* SLinkDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD92882C4FA15A0077D9D3 /* SLinkDataView.swift */; };
 		6EFD928B2C4FA28F0077D9D3 /* LinkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD928A2C4FA28F0077D9D3 /* LinkDataManager.swift */; };
 		6EFD928D2C4FA9470077D9D3 /* LinkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD928C2C4FA9470077D9D3 /* LinkData.swift */; };
-		77243EBA2C50BF5A007578B0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EB92C50BF59007578B0 /* Model.swift */; };
-		77243EBC2C50BF72007578B0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBB2C50BF72007578B0 /* ViewModel.swift */; };
-		77243EBE2C50C024007578B0 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBD2C50C024007578B0 /* PhotoInfoView.swift */; };
-		77243EC02C50EE7A007578B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBF2C50EE7A007578B0 /* MainView.swift */; };
-		77243EC22C514DBA007578B0 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EC12C514DBA007578B0 /* WebView.swift */; };
+		77243EBA2C50BF5A007578B0 /* LinkDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EB92C50BF59007578B0 /* LinkDataModel.swift */; };
+		77243EBC2C50BF72007578B0 /* LinkDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBB2C50BF72007578B0 /* LinkDataViewModel.swift */; };
+		77243EBE2C50C024007578B0 /* LinkDataPhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBD2C50C024007578B0 /* LinkDataPhotoInfoView.swift */; };
+		77243EC02C50EE7A007578B0 /* LinkDataMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EBF2C50EE7A007578B0 /* LinkDataMainView.swift */; };
+		77243EC22C514DBA007578B0 /* LinkDataWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77243EC12C514DBA007578B0 /* LinkDataWebView.swift */; };
 		7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0B2C2BD156002A8104 /* MainTabView.swift */; };
 		7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */; };
 		77CC8AFE2C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
@@ -125,11 +125,11 @@
 		6EFD92882C4FA15A0077D9D3 /* SLinkDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLinkDataView.swift; sourceTree = "<group>"; };
 		6EFD928A2C4FA28F0077D9D3 /* LinkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataManager.swift; sourceTree = "<group>"; };
 		6EFD928C2C4FA9470077D9D3 /* LinkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkData.swift; sourceTree = "<group>"; };
-		77243EB92C50BF59007578B0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		77243EBB2C50BF72007578B0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		77243EBD2C50C024007578B0 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
-		77243EBF2C50EE7A007578B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		77243EC12C514DBA007578B0 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		77243EB92C50BF59007578B0 /* LinkDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataModel.swift; sourceTree = "<group>"; };
+		77243EBB2C50BF72007578B0 /* LinkDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataViewModel.swift; sourceTree = "<group>"; };
+		77243EBD2C50C024007578B0 /* LinkDataPhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataPhotoInfoView.swift; sourceTree = "<group>"; };
+		77243EBF2C50EE7A007578B0 /* LinkDataMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataMainView.swift; sourceTree = "<group>"; };
+		77243EC12C514DBA007578B0 /* LinkDataWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataWebView.swift; sourceTree = "<group>"; };
 		7738FB0B2C2BD156002A8104 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7738FB0D2C2BD1F6002A8104 /* SumchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumchiveView.swift; sourceTree = "<group>"; };
 		77CC8AFA2C4D594A0022EA23 /* SwiftUIStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,45 +320,27 @@
 			path = So0Models;
 			sourceTree = "<group>";
 		};
-		2CF34EF72C49FC6D0049F6A4 /* SumchiveModels */ = {
-			isa = PBXGroup;
-			children = (
-				2CF34EF52C49FC6D0049F6A4 /* SumchiveLottoModel.swift */,
-				2CF34EF62C49FC6D0049F6A4 /* SumchiveRecorderModel.swift */,
-			);
-			path = SumchiveModels;
-			sourceTree = "<group>";
-		};
-		2CF34EFA2C49FC6D0049F6A4 /* SumchiveViews */ = {
-			isa = PBXGroup;
-			children = (
-				2CF34EF82C49FC6D0049F6A4 /* SumchiveLottoView.swift */,
-				2CF34EF92C49FC6D0049F6A4 /* SumchiveRecorderView.swift */,
-			);
-			path = SumchiveViews;
-			sourceTree = "<group>";
-		};
 		2CF34EFB2C49FC6D0049F6A4 /* SumchiveFiles */ = {
 			isa = PBXGroup;
 			children = (
+				77CD85932C5FC91B0072DCE5 /* SumchiveLotto */,
+				77CD85942C5FC93E0072DCE5 /* SumchiveRecorder */,
+				77243E752C508CB7007578B0 /* SumchiveLinkData */,
 				77CD85882C5FBBF40072DCE5 /* SumchiveAuthLogin */,
-				77243E752C508CB7007578B0 /* SumchiveLinkDataMVVM */,
-				2CF34EF72C49FC6D0049F6A4 /* SumchiveModels */,
-				2CF34EFA2C49FC6D0049F6A4 /* SumchiveViews */,
 			);
 			path = SumchiveFiles;
 			sourceTree = "<group>";
 		};
-		77243E752C508CB7007578B0 /* SumchiveLinkDataMVVM */ = {
+		77243E752C508CB7007578B0 /* SumchiveLinkData */ = {
 			isa = PBXGroup;
 			children = (
-				77243EB92C50BF59007578B0 /* Model.swift */,
-				77243EBB2C50BF72007578B0 /* ViewModel.swift */,
-				77243EBF2C50EE7A007578B0 /* MainView.swift */,
-				77243EBD2C50C024007578B0 /* PhotoInfoView.swift */,
-				77243EC12C514DBA007578B0 /* WebView.swift */,
+				77243EB92C50BF59007578B0 /* LinkDataModel.swift */,
+				77243EBB2C50BF72007578B0 /* LinkDataViewModel.swift */,
+				77243EBF2C50EE7A007578B0 /* LinkDataMainView.swift */,
+				77243EBD2C50C024007578B0 /* LinkDataPhotoInfoView.swift */,
+				77243EC12C514DBA007578B0 /* LinkDataWebView.swift */,
 			);
-			path = SumchiveLinkDataMVVM;
+			path = SumchiveLinkData;
 			sourceTree = "<group>";
 		};
 		77CD85882C5FBBF40072DCE5 /* SumchiveAuthLogin */ = {
@@ -371,6 +353,24 @@
 				77CD85912C5FBC490072DCE5 /* SumchiveWaveShape.swift */,
 			);
 			path = SumchiveAuthLogin;
+			sourceTree = "<group>";
+		};
+		77CD85932C5FC91B0072DCE5 /* SumchiveLotto */ = {
+			isa = PBXGroup;
+			children = (
+				2CF34EF52C49FC6D0049F6A4 /* SumchiveLottoModel.swift */,
+				2CF34EF82C49FC6D0049F6A4 /* SumchiveLottoView.swift */,
+			);
+			path = SumchiveLotto;
+			sourceTree = "<group>";
+		};
+		77CD85942C5FC93E0072DCE5 /* SumchiveRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				2CF34EF62C49FC6D0049F6A4 /* SumchiveRecorderModel.swift */,
+				2CF34EF92C49FC6D0049F6A4 /* SumchiveRecorderView.swift */,
+			);
+			path = SumchiveRecorder;
 			sourceTree = "<group>";
 		};
 		F6AC79FE2C5A947300EEB6DC /* LipsModel */ = {
@@ -600,11 +600,11 @@
 				F6AC7A052C5A947300EEB6DC /* LipsDataView.swift in Sources */,
 				F6D9B04A2C3C0778002EBBB9 /* LipsoundView.swift in Sources */,
 				2C3630242C2AD2CA000FD762 /* SoomView.swift in Sources */,
-				77243EBC2C50BF72007578B0 /* ViewModel.swift in Sources */,
+				77243EBC2C50BF72007578B0 /* LinkDataViewModel.swift in Sources */,
 				2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */,
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,
 				2C3120342C594B31005F5BEE /* CardView.swift in Sources */,
-				77243EC22C514DBA007578B0 /* WebView.swift in Sources */,
+				77243EC22C514DBA007578B0 /* LinkDataWebView.swift in Sources */,
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				2C3120382C594B5D005F5BEE /* SoomPhotoViewModel.swift in Sources */,
@@ -619,12 +619,12 @@
 				7738FB0E2C2BD1F6002A8104 /* SumchiveView.swift in Sources */,
 				FB83B4F62C508729004070B1 /* mFetchData.swift in Sources */,
 				F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */,
-				77243EBA2C50BF5A007578B0 /* Model.swift in Sources */,
+				77243EBA2C50BF5A007578B0 /* LinkDataModel.swift in Sources */,
 				2CF34EFD2C49FC6D0049F6A4 /* SumchiveRecorderModel.swift in Sources */,
 				F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */,
 				2C3120362C594B48005F5BEE /* SoomPhotoModel.swift in Sources */,
 				2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */,
-				77243EBE2C50C024007578B0 /* PhotoInfoView.swift in Sources */,
+				77243EBE2C50C024007578B0 /* LinkDataPhotoInfoView.swift in Sources */,
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				FB83B4F32C5086E7004070B1 /* mFetchDataManager.swift in Sources */,
@@ -647,7 +647,7 @@
 				6EFD928B2C4FA28F0077D9D3 /* LinkDataManager.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
 				2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */,
-				77243EC02C50EE7A007578B0 /* MainView.swift in Sources */,
+				77243EC02C50EE7A007578B0 /* LinkDataMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
