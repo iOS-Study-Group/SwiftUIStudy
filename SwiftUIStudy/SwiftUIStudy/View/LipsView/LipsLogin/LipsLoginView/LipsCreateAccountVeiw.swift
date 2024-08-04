@@ -9,13 +9,13 @@ import SwiftUI
 
 struct LipsCreateAccountVeiw: View {
     @StateObject private var viewModel = LipsCreateAccountViewModel()
-    
+    // @Environment(\.presentationMode) private var presentationMode
     @State var userName: String = ""
     @State var userEmail: String = ""
     @State var userPassword: String = ""
     @State var checkUserPassword: String = ""
     @FocusState private var focusedField: Field?
-
+    
     //패스워드 숫자 길이 제한 검증하기 위한 연산 프로퍼티
     private var isPasswordCount: Bool {
         userPassword.count <= 5
@@ -26,9 +26,10 @@ struct LipsCreateAccountVeiw: View {
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: userEmail)
     }
-    @State var isSuccesCreateAccountAlert: Bool = false
     
-   // @State var isPasswordUnCorrectError: Bool = true
+    @State private var isSuccessCreateAccountAlert: Bool = false
+    @State private var showErrorAlert: Bool = false
+    // @State var isPasswordUnCorrectError: Bool = true
     
     
     
@@ -37,16 +38,29 @@ struct LipsCreateAccountVeiw: View {
         VStack(spacing: 30) {
             
             VStack{
-                Text("SuperMario5 회원가입").font(.title)
-                Text("이메일과 비밀번호를 입력하여 회원가입을 해보세요!").font(.callout)
+                //맘에안듬..
+                Text("SuperMario5 회원가입")
+                    .font(.title)
+                    .bold()
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [.pink, .blue , .yellow, .red, .green, .pink]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .shadow(color: .black, radius: 2, x: 1, y: 1)
+                    .padding(.bottom, 5)
+                
+                Text("이메일과 비밀번호를 입력하여 회원가입을 해보세요!")
+                    .font(.callout)
+                    .foregroundColor(.white) // 흰색 텍스트
+                    .shadow(color: .black, radius: 1, x: 0, y: 1)
             }
             
             VStack{
-                Text("이름").padding(.top)
-                    .padding(.leading,-165)
-                    .font(.caption2)
-                    .foregroundColor(.gray)
-                    .opacity(userName.isEmpty ? (focusedField == .name ? 1 : 0) : 1) // 플레이스홀더처럼 보이게
+                
+                Text("이름").textFieldStyle(paddingTop: 20, paddingLeading: -165, isFocused: focusedField == .name)
                 
                 UnderlineTextFieldView(
                     text: $userName,
@@ -56,13 +70,11 @@ struct LipsCreateAccountVeiw: View {
                 )
                 .focused($focusedField, equals: .name)
             }
-                        
+            
             VStack{
-                Text("이메일").padding(.top)
-                    .padding(.leading,-165)
-                    .font(.caption2)
-                    .foregroundColor(.gray)
-                    .opacity(userEmail.isEmpty ? (focusedField == .email ? 1 : 0) : 1)
+                
+                Text("이메일")
+                    .textFieldStyle(paddingTop: 20, paddingLeading: -165, isFocused: focusedField == .email)
                 
                 UnderlineTextFieldView(
                     text: $userEmail,
@@ -71,26 +83,23 @@ struct LipsCreateAccountVeiw: View {
                     isFocused: focusedField == .email
                 )
                 .focused($focusedField, equals: .email)
+                
                 HStack{
+                    
                     Image(systemName: "exclamationmark.triangle.fill").font(.caption2)
                     Text("이메일 형식으로 입력해주세요!")
                         .font(.caption2)
-                        
-                        Spacer()
+                    Spacer()
                 }
                 .padding(.leading)
                 .foregroundColor(isEmailForm ? .clear : .red)
                 .opacity(userEmail.isEmpty ? (focusedField == .email ? 1 : 0) : 1)
             }
             
-         
-            
             VStack{
-                Text("패스워드").padding(.top)
-                    .padding(.leading,-165)
-                    .font(.caption2)
-                    .foregroundColor(.gray)
-                    .opacity(userPassword.isEmpty ? (focusedField == .password ? 1 : 0) : 1)
+                
+                Text("패스워드")
+                    .textFieldStyle(paddingTop: 20, paddingLeading: -165, isFocused: focusedField == .password)
                 
                 UnderlineTextFieldView(
                     text: $userPassword,
@@ -101,25 +110,23 @@ struct LipsCreateAccountVeiw: View {
                 .focused($focusedField, equals: .password)
                 
                 HStack{
+                    
                     Image(systemName: "exclamationmark.triangle.fill").font(.caption2)
                     Text("패스워드는 6자리 이상 입력해주세용!")
                         .font(.caption2)
-                        
-                        Spacer()
+                    
+                    Spacer()
                 }
                 .padding(.leading)
                 .foregroundColor(isPasswordCount ? .red : .clear)
                 .opacity(userPassword.isEmpty ? (focusedField == .password ? 1 : 0) : 1)
-    
+                
             }
             
             VStack{
-                Text("패스워드 확인").padding(.top)
-                    .padding(.leading,-165)
-                    .font(.caption2)
-                    .foregroundColor(.gray)
-                    .opacity(checkUserPassword.isEmpty ? (focusedField == .checkingPassword ? 1 : 0) : 1)
-                    
+                
+                Text("패스워드 확인")
+                    .textFieldStyle(paddingTop: 20, paddingLeading: -165, isFocused: focusedField == .checkingPassword)
                 
                 UnderlineTextFieldView(
                     text: $checkUserPassword,
@@ -128,6 +135,7 @@ struct LipsCreateAccountVeiw: View {
                     isFocused: focusedField == .checkingPassword
                 )
                 .focused($focusedField, equals: .checkingPassword)
+                
                 HStack{
                     
                     if checkUserPassword != userPassword {
@@ -135,45 +143,66 @@ struct LipsCreateAccountVeiw: View {
                         Text("비밀번호가 서로 달라용!")
                             .font(.caption2)
                     }
-                        Spacer()
+                    Spacer()
                 }
                 .padding(.leading)
                 .opacity(checkUserPassword.isEmpty ? (focusedField == .checkingPassword ? 1 : 0) : 1)
                 //.foregroundColor(isPasswordUnCorrectError ? .red : .clear)
                 .foregroundColor(.red)
-    
+                
             }
+            
             Button(action: {
                 Task {
-                    await viewModel.signUp(email:userEmail , userName: userName ,password: userPassword)
-                   
-                    if viewModel.successMessage != nil {
-                        isSuccesCreateAccountAlert = true
-                    }
+                    await signUpUser()
                 }
-                isSuccesCreateAccountAlert = true
             }, label: {
-                Text("회원가입")
+                Text("회원가입").font(.headline)
             }).disabled(!checkSignup() ? true : false)
-                .alert(isPresented: $isSuccesCreateAccountAlert) {
+                .frame(width: 280, height: 40)
+                .background(checkSignup() ? Color(red: 200 / 255, green: 46 / 255, blue: 90 / 255):Color.gray)
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .alert(isPresented: $isSuccessCreateAccountAlert) {
                     Alert(
                         title: Text("알림"),
-                        message: Text(String(viewModel.successMessage ?? "")), //알림뜨기전에 "" 지연 시간 추후 해결 필요
+                        message: Text(viewModel.successMessage ?? "\(userName)님 회원가입을 환영합니다"),
                         dismissButton: .default(Text("확인")) {
-                            // Alert 닫기 후 successMessage 초기화
                             viewModel.successMessage = nil
+                            // presentationMode.wrappedValue.dismiss()
                         }
                     )
                 }
-
-
-
+                .alert(isPresented: $showErrorAlert) {
+                    Alert(
+                        title: Text("오류"),
+                        message: Text(viewModel.errorMessage ?? "회원가입에 실패했습니다."),
+                        dismissButton: .default(Text("확인")) {
+                            viewModel.errorMessage = nil
+                        }
+                    )
+                }
+            
+            
         }.padding()
         Spacer()
-            
+        
     }
     
-    func checkSignup() -> Bool {
+    //현재 로그인이 성공하였을때 알림이 안뜸. 고민중.. 콘솔에 찍히는걸 보아 successMessage를 뷰모델에서 받아오는거 같긴한데.. 알림을 안띄어줌..
+    private func signUpUser() async {
+        await viewModel.signUp(email: userEmail, userName: userName, password: userPassword)
+        print("Error Message: \(viewModel.errorMessage ?? "None")")
+        print("Success Message: \(viewModel.successMessage ?? "None")")
+        if viewModel.errorMessage != nil {
+            showErrorAlert = true
+        } else if viewModel.successMessage != nil {
+            isSuccessCreateAccountAlert = true
+        }
+    }
+    
+    
+    private func checkSignup() -> Bool {
         if userName.isEmpty || userEmail.isEmpty || userPassword.isEmpty || checkUserPassword.isEmpty || checkUserPassword != userPassword{
             return false
         }
@@ -181,11 +210,9 @@ struct LipsCreateAccountVeiw: View {
         return true
     }
     
-
+    
     
 }
-
-
 
 
 extension LipsCreateAccountVeiw {

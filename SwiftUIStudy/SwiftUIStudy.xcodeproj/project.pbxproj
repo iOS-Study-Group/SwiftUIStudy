@@ -35,6 +35,7 @@
 		77CC8AFE2C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
 		77CC8AFF2C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
 		77CC8B002C4D5D4A0022EA23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */; };
+		F603B6452C5FCE8600CED00E /* LipsLoginTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603B6442C5FCE8600CED00E /* LipsLoginTextfieldStyle.swift */; };
 		F65FD6462C3FCE58008399E4 /* SoundRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65FD6452C3FCE58008399E4 /* SoundRecord.swift */; };
 		F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */; };
 		F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */; };
@@ -107,6 +108,7 @@
 		77CC8AFB2C4D594A0022EA23 /* SwiftUIStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CC8AFC2C4D594A0022EA23 /* SwiftUIStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CC8AFD2C4D5D490022EA23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F603B6442C5FCE8600CED00E /* LipsLoginTextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsLoginTextfieldStyle.swift; sourceTree = "<group>"; };
 		F65FD6452C3FCE58008399E4 /* SoundRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecord.swift; sourceTree = "<group>"; };
 		F6AC79FD2C5A947300EEB6DC /* LipsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsDataModel.swift; sourceTree = "<group>"; };
 		F6AC79FF2C5A947300EEB6DC /* LipsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LipsViewModel.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				F6AC7A092C5A9D5700EEB6DC /* LipsLoginView.swift */,
 				F6ADBF6B2C5CA44C0077C2C3 /* UnderlineView.swift */,
 				F6ADBF6F2C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift */,
+				F603B6442C5FCE8600CED00E /* LipsLoginTextfieldStyle.swift */,
 			);
 			path = LipsLoginView;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				F6ADBF702C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift in Sources */,
 				2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */,
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
+				F603B6452C5FCE8600CED00E /* LipsLoginTextfieldStyle.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
