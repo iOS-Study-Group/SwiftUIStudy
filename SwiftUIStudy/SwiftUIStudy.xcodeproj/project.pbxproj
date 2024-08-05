@@ -321,6 +321,7 @@
 		F6AC7A062C5A9D2600EEB6DC /* LipsLogin */ = {
 			isa = PBXGroup;
 			children = (
+				F6AC7A092C5A9D5700EEB6DC /* LipsLoginView.swift */,
 				F6DB17962C5E7670009A5E4D /* LipsLogiViewModel */,
 				F6DB17952C5E7655009A5E4D /* LipsLoginView */,
 			);
@@ -343,7 +344,6 @@
 		F6DB17952C5E7655009A5E4D /* LipsLoginView */ = {
 			isa = PBXGroup;
 			children = (
-				F6AC7A092C5A9D5700EEB6DC /* LipsLoginView.swift */,
 				F6ADBF6B2C5CA44C0077C2C3 /* UnderlineView.swift */,
 				F6ADBF6F2C5CC2620077C2C3 /* LipsCreateAccountVeiw.swift */,
 				F603B6442C5FCE8600CED00E /* LipsLoginTextfieldStyle.swift */,
