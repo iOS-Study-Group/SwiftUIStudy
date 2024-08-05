@@ -28,6 +28,9 @@ struct LipsView: View {
                 NavigationLink(destination: LipsDataView()) {
                     Text("LipsDataView로이동")
                 }
+                NavigationLink(destination: LipsLoginView()) {
+                    Text("lipsLoginView로이동")
+                }
                 .navigationTitle("SuperMari5")
                 
             }
