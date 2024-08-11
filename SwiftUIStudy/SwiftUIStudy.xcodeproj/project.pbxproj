@@ -79,6 +79,14 @@
 		FB83B4F32C5086E7004070B1 /* mFetchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B4F22C5086E7004070B1 /* mFetchDataManager.swift */; };
 		FB83B4F62C508729004070B1 /* mFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B4F52C508729004070B1 /* mFetchData.swift */; };
 		FB83B5F92C56BC2B004070B1 /* mFetchDataDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B5F82C56BC2B004070B1 /* mFetchDataDetailView.swift */; };
+		FB83B6372C58A381004070B1 /* mFirebaseAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B6362C58A381004070B1 /* mFirebaseAuthView.swift */; };
+		FB83B6392C58A3D5004070B1 /* mFirebaseSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B6382C58A3D5004070B1 /* mFirebaseSignInView.swift */; };
+		FB83B63B2C58A3E1004070B1 /* mFirebaseSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B63A2C58A3E1004070B1 /* mFirebaseSignupView.swift */; };
+		FB83B63D2C593EB2004070B1 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B63C2C593EB2004070B1 /* TextFieldModifier.swift */; };
+		FB83B63F2C5947F5004070B1 /* EdgeBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B63E2C5947F5004070B1 /* EdgeBorder.swift */; };
+		FB83B6412C594D1A004070B1 /* mAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B6402C594D1A004070B1 /* mAuthenticationManager.swift */; };
+		FB83B6482C5950A4004070B1 /* mAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B6472C5950A4004070B1 /* mAuthError.swift */; };
+		FB83B64A2C5CBDF7004070B1 /* mPublicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83B6492C5CBDF7004070B1 /* mPublicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +172,14 @@
 		FB83B4F22C5086E7004070B1 /* mFetchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchDataManager.swift; sourceTree = "<group>"; };
 		FB83B4F52C508729004070B1 /* mFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchData.swift; sourceTree = "<group>"; };
 		FB83B5F82C56BC2B004070B1 /* mFetchDataDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFetchDataDetailView.swift; sourceTree = "<group>"; };
+		FB83B6362C58A381004070B1 /* mFirebaseAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFirebaseAuthView.swift; sourceTree = "<group>"; };
+		FB83B6382C58A3D5004070B1 /* mFirebaseSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFirebaseSignInView.swift; sourceTree = "<group>"; };
+		FB83B63A2C58A3E1004070B1 /* mFirebaseSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mFirebaseSignupView.swift; sourceTree = "<group>"; };
+		FB83B63C2C593EB2004070B1 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		FB83B63E2C5947F5004070B1 /* EdgeBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeBorder.swift; sourceTree = "<group>"; };
+		FB83B6402C594D1A004070B1 /* mAuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAuthenticationManager.swift; sourceTree = "<group>"; };
+		FB83B6472C5950A4004070B1 /* mAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mAuthError.swift; sourceTree = "<group>"; };
+		FB83B6492C5CBDF7004070B1 /* mPublicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mPublicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,9 +444,13 @@
 			children = (
 				FB56F7392C3CBA09002D24C1 /* mCalcView.swift */,
 				FB83B4F02C5086B7004070B1 /* mFetchDataView.swift */,
+				FB83B6362C58A381004070B1 /* mFirebaseAuthView.swift */,
+				FB83B6382C58A3D5004070B1 /* mFirebaseSignInView.swift */,
+				FB83B63A2C58A3E1004070B1 /* mFirebaseSignupView.swift */,
 				FB83B5F82C56BC2B004070B1 /* mFetchDataDetailView.swift */,
 				FB56F73B2C3CBA3E002D24C1 /* mLottoView.swift */,
 				FB56F73D2C3CBAD5002D24C1 /* mVoiceView.swift */,
+				FB83B6492C5CBDF7004070B1 /* mPublicView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +458,9 @@
 		FB56F73F2C3CC533002D24C1 /* MarbleFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FB83B6462C59509C004070B1 /* Error */,
+				FB83B6452C59507C004070B1 /* Modifier */,
+				FB83B6442C595070004070B1 /* Data */,
 				FB83B4F42C50870F004070B1 /* Model */,
 				FB56F7402C3CC6C7002D24C1 /* ViewModel */,
 				FB56F7382C3CB9F4002D24C1 /* View */,
@@ -449,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				FB56F7412C3CC6DA002D24C1 /* mAudioRecorderManager.swift */,
+				FB83B6402C594D1A004070B1 /* mAuthenticationManager.swift */,
 				FB83B4F22C5086E7004070B1 /* mFetchDataManager.swift */,
 			);
 			path = ViewModel;
@@ -460,6 +484,30 @@
 				FB83B4F52C508729004070B1 /* mFetchData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FB83B6442C595070004070B1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FB83B6452C59507C004070B1 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				FB83B63C2C593EB2004070B1 /* TextFieldModifier.swift */,
+				FB83B63E2C5947F5004070B1 /* EdgeBorder.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		FB83B6462C59509C004070B1 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				FB83B6472C5950A4004070B1 /* mAuthError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +668,11 @@
 				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
 				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
 				2C3120382C594B5D005F5BEE /* SoomPhotoViewModel.swift in Sources */,
+				FB83B6482C5950A4004070B1 /* mAuthError.swift in Sources */,
+				2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */,
+				2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */,
+				FB83B63D2C593EB2004070B1 /* TextFieldModifier.swift in Sources */,
+				FB83B6372C58A381004070B1 /* mFirebaseAuthView.swift in Sources */,
 				FB83B4F12C5086B7004070B1 /* mFetchDataView.swift in Sources */,
 				F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */,
 				77CD85902C5FBC390072DCE5 /* SumchiveSignInView.swift in Sources */,
@@ -639,6 +692,8 @@
 				2C31203C2C5950FA005F5BEE /* SoomCustomTextField.swift in Sources */,
 				2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */,
 				77243EBE2C50C024007578B0 /* LinkDataPhotoInfoView.swift in Sources */,
+				FB83B64A2C5CBDF7004070B1 /* mPublicView.swift in Sources */,
+				FB83B63B2C58A3E1004070B1 /* mFirebaseSignupView.swift in Sources */,
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
 				FB56F73E2C3CBAD5002D24C1 /* mVoiceView.swift in Sources */,
 				FB83B4F32C5086E7004070B1 /* mFetchDataManager.swift in Sources */,
@@ -650,8 +705,10 @@
 				F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */,
 				2CC49FD22C5A7B7F0013C387 /* SoomLoginViewModel.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
+				FB83B6412C594D1A004070B1 /* mAuthenticationManager.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
+				FB83B6392C58A3D5004070B1 /* mFirebaseSignInView.swift in Sources */,
 				FB56F7422C3CC6DA002D24C1 /* mAudioRecorderManager.swift in Sources */,
 				2CC584662C4A332B005208C2 /* AudioRecorderFirebaseManager.swift in Sources */,
 				2CF34EFF2C49FC6D0049F6A4 /* SumchiveRecorderView.swift in Sources */,
@@ -659,6 +716,7 @@
 				2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */,
 				2CC584672C4A332B005208C2 /* AudioRecorderManager.swift in Sources */,
 				2C3120402C5955D6005F5BEE /* SoomCustomButton.swift in Sources */,
+				FB83B63F2C5947F5004070B1 /* EdgeBorder.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				6EFD928B2C4FA28F0077D9D3 /* LinkDataManager.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
