@@ -31,7 +31,8 @@ struct SoomView: View {
                         }
                         .padding()
                         Spacer()
-                        Image("Swift")                            .resizable()
+                        Image("Swift")                            
+                            .resizable()
                             .frame(width: 50,height: 50)
                             .padding()
                     }
@@ -39,22 +40,38 @@ struct SoomView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .fill(.indigo.gradient)
                     )
+                    .padding(.horizontal,10)
                     Spacer()
-                    NavigationLink{
-                        LottoView()
-                    }label: {
-                        Text("다음")
-                            .frame(maxWidth:.infinity)
-                            .frame(height: 50)
-                            .foregroundStyle(.white)
-                            .background(
-                                Circle()
-                                    .fill(.mint.gradient)
-                            )
+                    List{
+                        NavigationLink{
+                            LottoView()
+                        }label: {
+                            Text("LottoView")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(height: 50)
+                                .foregroundStyle(.black)
+                        }
+                        
+                        NavigationLink{
+                            SoomVoiceRecordingView()
+                        }label: {
+                            Text("SoomVoiceRecordingView")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(height: 50)
+                                .foregroundStyle(.black)
+                        }
+
+                        
+                        NavigationLink{
+                            SoomLoginView()
+                        }label: {
+                            Text("SoomLoginView")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(height: 50)
+                                .foregroundStyle(.black)
+                        }
                     }
-                    Spacer()
                 }
-                .padding(.horizontal,10)
             }
         }
     }

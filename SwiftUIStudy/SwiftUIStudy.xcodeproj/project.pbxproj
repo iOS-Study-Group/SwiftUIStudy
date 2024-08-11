@@ -11,6 +11,9 @@
 		2C3120342C594B31005F5BEE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3120332C594B31005F5BEE /* CardView.swift */; };
 		2C3120362C594B48005F5BEE /* SoomPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3120352C594B48005F5BEE /* SoomPhotoModel.swift */; };
 		2C3120382C594B5D005F5BEE /* SoomPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3120372C594B5D005F5BEE /* SoomPhotoViewModel.swift */; };
+		2C31203C2C5950FA005F5BEE /* SoomCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31203B2C5950FA005F5BEE /* SoomCustomTextField.swift */; };
+		2C31203E2C595489005F5BEE /* SoomLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31203D2C595489005F5BEE /* SoomLoginView.swift */; };
+		2C3120402C5955D6005F5BEE /* SoomCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31203F2C5955D6005F5BEE /* SoomCustomButton.swift */; };
 		2C362FFA2C2AD21D000FD762 /* SwiftUIStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C362FF92C2AD21D000FD762 /* SwiftUIStudyApp.swift */; };
 		2C362FFE2C2AD21E000FD762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C362FFD2C2AD21E000FD762 /* Assets.xcassets */; };
 		2C3630012C2AD21E000FD762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3630002C2AD21E000FD762 /* Preview Assets.xcassets */; };
@@ -22,6 +25,7 @@
 		2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3630292C2AD326000FD762 /* ActIveView.swift */; };
 		2C36302C2C2AD346000FD762 /* LipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302B2C2AD346000FD762 /* LipsView.swift */; };
 		2C36302E2C2AD35C000FD762 /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C36302D2C2AD35C000FD762 /* MarbleView.swift */; };
+		2CC49FD22C5A7B7F0013C387 /* SoomLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC49FD12C5A7B7F0013C387 /* SoomLoginViewModel.swift */; };
 		2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5845E2C4A332B005208C2 /* SLottoView.swift */; };
 		2CC584652C4A332B005208C2 /* SRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC5845F2C4A332B005208C2 /* SRecordView.swift */; };
 		2CC584662C4A332B005208C2 /* AudioRecorderFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC584612C4A332B005208C2 /* AudioRecorderFirebaseManager.swift */; };
@@ -99,6 +103,9 @@
 		2C3120332C594B31005F5BEE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2C3120352C594B48005F5BEE /* SoomPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomPhotoModel.swift; sourceTree = "<group>"; };
 		2C3120372C594B5D005F5BEE /* SoomPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomPhotoViewModel.swift; sourceTree = "<group>"; };
+		2C31203B2C5950FA005F5BEE /* SoomCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomCustomTextField.swift; sourceTree = "<group>"; };
+		2C31203D2C595489005F5BEE /* SoomLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomLoginView.swift; sourceTree = "<group>"; };
+		2C31203F2C5955D6005F5BEE /* SoomCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomCustomButton.swift; sourceTree = "<group>"; };
 		2C362FF92C2AD21D000FD762 /* SwiftUIStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStudyApp.swift; sourceTree = "<group>"; };
 		2C362FFD2C2AD21E000FD762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3630002C2AD21E000FD762 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 		2C3630292C2AD326000FD762 /* ActIveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActIveView.swift; sourceTree = "<group>"; };
 		2C36302B2C2AD346000FD762 /* LipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LipsView.swift; sourceTree = "<group>"; };
 		2C36302D2C2AD35C000FD762 /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
+		2CC49FD12C5A7B7F0013C387 /* SoomLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoomLoginViewModel.swift; sourceTree = "<group>"; };
 		2CC5845E2C4A332B005208C2 /* SLottoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLottoView.swift; sourceTree = "<group>"; };
 		2CC5845F2C4A332B005208C2 /* SRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRecordView.swift; sourceTree = "<group>"; };
 		2CC584612C4A332B005208C2 /* AudioRecorderFirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderFirebaseManager.swift; sourceTree = "<group>"; };
@@ -197,11 +205,14 @@
 				2C3120392C594B6A005F5BEE /* Model */,
 				2C31203A2C594B80005F5BEE /* ViewModel */,
 				2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */,
+				2C31203F2C5955D6005F5BEE /* SoomCustomButton.swift */,
 				2CF34F042C4A25950049F6A4 /* Recorder.swift */,
 				2C3120312C594B0F005F5BEE /* SoomPhotosView.swift */,
 				2C3120332C594B31005F5BEE /* CardView.swift */,
 				2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */,
 				2CCF619D2C3425B70091062C /* LottoView.swift */,
+				2C31203B2C5950FA005F5BEE /* SoomCustomTextField.swift */,
+				2C31203D2C595489005F5BEE /* SoomLoginView.swift */,
 			);
 			path = SoomViews;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 		2C31203A2C594B80005F5BEE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CC49FD12C5A7B7F0013C387 /* SoomLoginViewModel.swift */,
 				2C3120372C594B5D005F5BEE /* SoomPhotoViewModel.swift */,
 			);
 			path = ViewModel;
@@ -623,6 +635,8 @@
 				2CF34EFD2C49FC6D0049F6A4 /* SumchiveRecorderModel.swift in Sources */,
 				F6F2F8382C44F43C007F83D7 /* ModalView.swift in Sources */,
 				2C3120362C594B48005F5BEE /* SoomPhotoModel.swift in Sources */,
+				2C31203E2C595489005F5BEE /* SoomLoginView.swift in Sources */,
+				2C31203C2C5950FA005F5BEE /* SoomCustomTextField.swift in Sources */,
 				2CF34EFE2C49FC6D0049F6A4 /* SumchiveLottoView.swift in Sources */,
 				77243EBE2C50C024007578B0 /* LinkDataPhotoInfoView.swift in Sources */,
 				2CF34EFC2C49FC6D0049F6A4 /* SumchiveLottoModel.swift in Sources */,
@@ -634,6 +648,7 @@
 				77CD858A2C5FBC100072DCE5 /* SumchiveSignUpModel.swift in Sources */,
 				FB83B5F92C56BC2B004070B1 /* mFetchDataDetailView.swift in Sources */,
 				F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */,
+				2CC49FD22C5A7B7F0013C387 /* SoomLoginViewModel.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,
 				FB56F73A2C3CBA09002D24C1 /* mCalcView.swift in Sources */,
@@ -643,6 +658,7 @@
 				2C3120322C594B0F005F5BEE /* SoomPhotosView.swift in Sources */,
 				2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */,
 				2CC584672C4A332B005208C2 /* AudioRecorderManager.swift in Sources */,
+				2C3120402C5955D6005F5BEE /* SoomCustomButton.swift in Sources */,
 				2C3630262C2AD2DB000FD762 /* So0View.swift in Sources */,
 				6EFD928B2C4FA28F0077D9D3 /* LinkDataManager.swift in Sources */,
 				2C36302A2C2AD326000FD762 /* ActIveView.swift in Sources */,
