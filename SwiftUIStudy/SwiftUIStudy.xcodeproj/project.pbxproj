@@ -38,6 +38,8 @@
 		2CF34F072C4A25950049F6A4 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F042C4A25950049F6A4 /* Recorder.swift */; };
 		2CF34F082C4A25950049F6A4 /* SoomVoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */; };
 		2CF34F092C4A25950049F6A4 /* CustomSystemImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */; };
+		6EC775DC2C586C0D005AC9F5 /* LoginOnFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC775DB2C586C0D005AC9F5 /* LoginOnFirebaseManager.swift */; };
+		6EC775DE2C587970005AC9F5 /* SLogInOnFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC775DD2C587970005AC9F5 /* SLogInOnFirebase.swift */; };
 		6EFD92892C4FA15A0077D9D3 /* SLinkDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD92882C4FA15A0077D9D3 /* SLinkDataView.swift */; };
 		6EFD928B2C4FA28F0077D9D3 /* LinkDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD928A2C4FA28F0077D9D3 /* LinkDataManager.swift */; };
 		6EFD928D2C4FA9470077D9D3 /* LinkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD928C2C4FA9470077D9D3 /* LinkData.swift */; };
@@ -138,6 +140,8 @@
 		2CF34F042C4A25950049F6A4 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		2CF34F052C4A25950049F6A4 /* SoomVoiceRecordingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoomVoiceRecordingView.swift; sourceTree = "<group>"; };
 		2CF34F062C4A25950049F6A4 /* CustomSystemImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSystemImageButton.swift; sourceTree = "<group>"; };
+		6EC775DB2C586C0D005AC9F5 /* LoginOnFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOnFirebaseManager.swift; sourceTree = "<group>"; };
+		6EC775DD2C587970005AC9F5 /* SLogInOnFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLogInOnFirebase.swift; sourceTree = "<group>"; };
 		6EFD92882C4FA15A0077D9D3 /* SLinkDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLinkDataView.swift; sourceTree = "<group>"; };
 		6EFD928A2C4FA28F0077D9D3 /* LinkDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataManager.swift; sourceTree = "<group>"; };
 		6EFD928C2C4FA9470077D9D3 /* LinkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkData.swift; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 				2CC5845E2C4A332B005208C2 /* SLottoView.swift */,
 				2CC5845F2C4A332B005208C2 /* SRecordView.swift */,
 				6EFD92882C4FA15A0077D9D3 /* SLinkDataView.swift */,
+				6EC775DD2C587970005AC9F5 /* SLogInOnFirebase.swift */,
 			);
 			path = So0Views;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				2CC584622C4A332B005208C2 /* AudioRecorderManager.swift */,
 				6EFD928A2C4FA28F0077D9D3 /* LinkDataManager.swift */,
 				6EFD928C2C4FA9470077D9D3 /* LinkData.swift */,
+				6EC775DB2C586C0D005AC9F5 /* LoginOnFirebaseManager.swift */,
 			);
 			path = So0Models;
 			sourceTree = "<group>";
@@ -677,6 +683,7 @@
 				F6AC7A042C5A947300EEB6DC /* LipsViewModel.swift in Sources */,
 				77CD85902C5FBC390072DCE5 /* SumchiveSignInView.swift in Sources */,
 				7738FB0C2C2BD156002A8104 /* MainTabView.swift in Sources */,
+				6EC775DE2C587970005AC9F5 /* SLogInOnFirebase.swift in Sources */,
 				F6B7CA6C2C410882009D0B69 /* recordFileView.swift in Sources */,
 				6EFD92892C4FA15A0077D9D3 /* SLinkDataView.swift in Sources */,
 				FB56F73C2C3CBA3F002D24C1 /* mLottoView.swift in Sources */,
@@ -704,6 +711,7 @@
 				FB83B5F92C56BC2B004070B1 /* mFetchDataDetailView.swift in Sources */,
 				F6AC7A032C5A947300EEB6DC /* LipsDataModel.swift in Sources */,
 				2CC49FD22C5A7B7F0013C387 /* SoomLoginViewModel.swift in Sources */,
+				6EC775DC2C586C0D005AC9F5 /* LoginOnFirebaseManager.swift in Sources */,
 				2CCF619E2C3425B70091062C /* LottoView.swift in Sources */,
 				FB83B6412C594D1A004070B1 /* mAuthenticationManager.swift in Sources */,
 				2CC584642C4A332B005208C2 /* SLottoView.swift in Sources */,

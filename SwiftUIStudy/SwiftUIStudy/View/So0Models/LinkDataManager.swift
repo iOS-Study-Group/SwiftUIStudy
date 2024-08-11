@@ -10,6 +10,12 @@ import Foundation
 class LinkDataManager: ObservableObject {
     @Published var linkData: LinkData = LinkData()
     
+    init() {
+        Task {
+            await getJSONDataValue()
+        }
+    }
+    
     func getJSONDataValue() async {
         Task {
             do {

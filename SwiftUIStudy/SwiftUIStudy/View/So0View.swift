@@ -85,9 +85,9 @@ struct So0View: View {
                                     SRecordView()
                                 } label: {
                                     VStack {
-                                        Text("3주차")
+                                        Text("3, 4주차")
                                             .frame(maxWidth: .infinity)
-                                        Text("음성 메모 만들기")
+                                        Text("음성 메모 만들기 & 파이어베이스에 연동하기")
                                             .font(.system(size: 12))
                                     }
                                 }
@@ -98,9 +98,22 @@ struct So0View: View {
                                     SLinkDataView()
                                 } label: {
                                     VStack {
-                                        Text("4주차")
+                                        Text("5주차")
                                             .frame(maxWidth: .infinity)
                                         Text("외부 서버 데이터 가져오기")
+                                            .font(.system(size: 12))
+                                    }
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(.white)
+                                
+                                NavigationLink {
+                                    SLogInOnFirebase()
+                                } label: {
+                                    VStack {
+                                        Text("6주차")
+                                            .frame(maxWidth: .infinity)
+                                        Text("로그인 페이지 만들기")
                                             .font(.system(size: 12))
                                     }
                                 }
