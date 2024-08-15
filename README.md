@@ -27,6 +27,12 @@
 ## 4주차 음성 메모 업로드
 <img width="651" alt="스크린샷 2024-07-23 오후 3 58 22" src="https://github.com/user-attachments/assets/abec41ca-6183-4067-96d5-5a0bf15af88f">
 
+## 6주차 로그인 / 회원가입
+<img width="800" alt="스크린샷 2024-08-15 오후 5 00 56" src="https://github.com/user-attachments/assets/1e4c8792-5b52-4f04-a62a-3cddc8fa4e95">
+
+<img width="800" alt="스크린샷 2024-08-15 오후 5 02 06" src="https://github.com/user-attachments/assets/52f7a5f1-afac-469d-8cd0-4c94271d19d9">
+
+
 
 
 
