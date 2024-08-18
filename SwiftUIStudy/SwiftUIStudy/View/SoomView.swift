@@ -70,6 +70,16 @@ struct SoomView: View {
                                 .frame(height: 50)
                                 .foregroundStyle(.black)
                         }
+                        
+                        NavigationLink{
+                            SoomCameraView()
+                        }label: {
+                            Text("Soom Camera View")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(height: 50)
+                                .foregroundStyle(.black)
+                        }
+
                     }
                 }
             }
